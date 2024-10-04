@@ -19,10 +19,10 @@ const Header = () => {
         <div className="flex items-center space-x-4">
           <Link href={"/"} className="flex items-center space-x-3">
             <div className="h-8 w-8 bg-blue-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">L</span>
+              <span className="text-white font-bold">R</span>
             </div>
             <h1 className="text-md font-semibold font-[family-name:var(--font-geist-sans)]">
-              STEAL STORE
+              RCRS STORE
             </h1>
           </Link>
           <div className=" lg:pl-3 space-x-6 text-md font-mono hidden sm:flex">

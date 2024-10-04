@@ -1,6 +1,16 @@
 import React from "react";
-import { Sparkles } from "lucide-react";
 import Link from "next/link";
+import {
+  ArrowUpCircle,
+  BarChart2,
+  Building,
+  Pipette,
+  RectangleEllipsis,
+  Shield,
+  Sliders,
+  Sparkles,
+  Triangle,
+} from "lucide-react";
 
 function Hero() {
   return (
@@ -13,7 +23,7 @@ function Hero() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="product bg-primary-foreground p-6 rounded-lg border hover:border-blue-500 shadow text-center  w-full flex flex-col">
-          <Sparkles className="mx-auto mb-4 text-blue-500 h-12 w-12" />{" "}
+          <BarChart2 className="mx-auto mb-4 text-blue-500 h-12 w-12" />{" "}
           <h2 className="text-xl font-semibold">TMT BAR</h2>
           <p className="mt-2 mb-4">
             TMT bars (Thermo Mechanically treated Bars) are high-strength
@@ -26,7 +36,7 @@ function Hero() {
         </div>
 
         <div className="product bg-primary-foreground p-6 rounded-lg border hover:border-blue-500 shadow text-center  w-full flex flex-col">
-          <Sparkles className="mx-auto mb-4 text-blue-500 h-12 w-12" />{" "}
+          <Triangle className="mx-auto mb-4 text-blue-500 h-12 w-12" />{" "}
           <h2 className="text-xl font-semibold">ANGLE</h2>
           <p className="mt-2 mb-4">
             Hindustan Iron Store supplies a wide range of Steel Angles. We offer
@@ -39,7 +49,7 @@ function Hero() {
         </div>
 
         <div className="product bg-primary-foreground p-6 rounded-lg border hover:border-blue-500 shadow text-center  w-full flex flex-col">
-          <Sparkles className="mx-auto mb-4 text-blue-500 h-12 w-12" />{" "}
+          <RectangleEllipsis className="mx-auto mb-4 text-blue-500 h-12 w-12" />{" "}
           <h2 className="text-xl font-semibold">FLAT BAR</h2>
           <p className="mt-2 mb-4">
             Our well-designed Flat Bars are perfect for construction purposes,
@@ -52,7 +62,7 @@ function Hero() {
         </div>
 
         <div className="product bg-primary-foreground p-6 rounded-lg border hover:border-blue-500 shadow text-center  w-full flex flex-col">
-          <Sparkles className="mx-auto mb-4 text-blue-500 h-12 w-12" />{" "}
+          <Pipette className="mx-auto mb-4 text-blue-500 h-12 w-12" />{" "}
           <h2 className="text-xl font-semibold">STEEL PLATE</h2>
           <p className="mt-2 mb-4">
             Steel Plates are typically more affordable than cold-rolled steel
@@ -65,7 +75,7 @@ function Hero() {
         </div>
 
         <div className="product bg-primary-foreground p-6 rounded-lg border hover:border-blue-500 shadow text-center  w-full flex flex-col">
-          <Sparkles className="mx-auto mb-4 text-blue-500 h-12 w-12" />{" "}
+          <Shield className="mx-auto mb-4 text-blue-500 h-12 w-12" />{" "}
           <h2 className="text-xl font-semibold">BLACK PIPE</h2>
           <p className="mt-2 mb-4">
             As one of the top manufacturers, our Black Pipes feature
@@ -78,7 +88,7 @@ function Hero() {
         </div>
 
         <div className="product bg-primary-foreground p-6 rounded-lg border hover:border-blue-500 shadow text-center  w-full flex flex-col">
-          <Sparkles className="mx-auto mb-4 text-blue-500 h-12 w-12" />{" "}
+          <ArrowUpCircle className="mx-auto mb-4 text-blue-500 h-12 w-12" />{" "}
           <h2 className="text-xl font-semibold">IRON CARDEN</h2>
           <p className="mt-2 mb-4">
             Known for their high tensile and yield strength, our Iron Cardens
@@ -91,7 +101,7 @@ function Hero() {
         </div>
 
         <div className="product bg-primary-foreground p-6 rounded-lg border hover:border-blue-500 shadow text-center  w-full flex flex-col">
-          <Sparkles className="mx-auto mb-4 text-blue-500 h-12 w-12" />{" "}
+          <Building className="mx-auto mb-4 text-blue-500 h-12 w-12" />{" "}
           <h2 className="text-xl font-semibold">GIRDER</h2>
           <p className="mt-2 mb-4">
             Our Channels, defined by their web height and flange width, are
@@ -104,7 +114,7 @@ function Hero() {
         </div>
 
         <div className="product bg-primary-foreground p-6 rounded-lg border hover:border-blue-500 shadow text-center  w-full flex flex-col">
-          <Sparkles className="mx-auto mb-4 text-blue-500 h-12 w-12" />{" "}
+          <Sliders className="mx-auto mb-4 text-blue-500 h-12 w-12" />{" "}
           <h2 className="text-xl font-semibold">CEMENT SHEET</h2>
           <p className="mt-2 mb-4">
             Cement Sheets are vital for constructing bridges and large
@@ -116,7 +126,7 @@ function Hero() {
           </Link>
         </div>
 
-        <div className=" product bg-primary-foreground p-6 rounded-lg border hover:border-blue-500 shadow text-center  w-full flex flex-col">
+        <div className="product bg-primary-foreground p-6 rounded-lg border hover:border-blue-500 shadow text-center  w-full flex flex-col">
           <Sparkles className="mx-auto mb-4 text-blue-500 h-12 w-12" />{" "}
           <h2 className="text-xl font-semibold">T IRON</h2>
           <p className="mt-2 mb-4">
