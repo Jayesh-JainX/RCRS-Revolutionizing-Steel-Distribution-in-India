@@ -33,6 +33,6 @@ To run the project locally, follow these steps:
 
 4. **Start the development server:**
 
-npm run dev
+   npm run dev
 
 _Visit http://localhost:3000 in your browser to view the website._
