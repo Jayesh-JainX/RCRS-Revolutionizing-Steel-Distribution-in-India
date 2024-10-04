@@ -8,10 +8,10 @@ function Footer() {
         <div className="flex ml-[14vw]">
           <Link href={"/"} className="flex items-center top-0 space-x-3">
             <div className="h-8 w-8 bg-blue-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">L</span>
+              <span className="text-white font-bold">R</span>
             </div>
             <h1 className="text-md font-semibold font-[family-name:var(--font-geist-sans)]">
-              STEAL STORE
+              RCRS STORE
             </h1>
           </Link>
           <nav>
