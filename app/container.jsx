@@ -47,7 +47,7 @@ function Container() {
   }, []);
 
   return (
-    <main className="m-4 pt-3">
+    <main className="m-4 ">
       {/* First section */}
       <div className="flex items-start space-x-4 mb-8">
         <Link href="/">
