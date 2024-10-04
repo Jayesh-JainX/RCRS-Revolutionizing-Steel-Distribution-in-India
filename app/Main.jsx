@@ -27,8 +27,8 @@ function Main() {
   };
 
   useEffect(() => {
-    const intervalId = setInterval(nextImage, 3000); // Auto slide every 3 seconds
-    return () => clearInterval(intervalId); // Clear interval on component unmount
+    const intervalId = setInterval(nextImage, 3000);
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
@@ -66,9 +66,8 @@ function Main() {
         </div>
       </div>
 
-      {/* Content Box */}
-      <div className="grid grid-cols-1 md:grid-cols-3 mx-[11.2vw] mt-4 backdrop-blur-md ">
-        <div className="flex flex-col  items-center p-8 rounded-l-lg rounded-br-lg shadow-lg bg-primary-foreground -translate-y-10">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 mx-[11.2vw] mt-4 backdrop-blur-md ">
+        <div className="flex flex-col  items-center p-8 rounded-lg rounded-br-lg shadow-lg bg-primary-foreground -translate-y-10">
           <div className="relative mb-4">
             <div className=" -inset-1  bg-blue-100 blur-lg" />
             <Telescope className="relative z-10 text-blue-600" size={40} />
@@ -96,7 +95,7 @@ function Main() {
           </p>
         </div>
 
-        <div className="flex flex-col items-center p-8 rounded-r-lg rounded-bl-lg  shadow-lg bg-primary-foreground  -translate-y-10">
+        <div className="flex flex-col items-center p-8 rounded-lg rounded-bl-lg  shadow-lg bg-primary-foreground  -translate-y-10">
           <div className="relative mb-4">
             <div className=" -inset-1 rounded-full bg-blue-100 blur-lg" />
             <Gem className="relative z-10 text-blue-600" size={40} />

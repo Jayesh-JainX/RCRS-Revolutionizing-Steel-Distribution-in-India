@@ -1,5 +1,3 @@
-// pages/shipping-return-policy.js
-
 import React from "react";
 
 const ShippingReturnPolicyPage = () => {

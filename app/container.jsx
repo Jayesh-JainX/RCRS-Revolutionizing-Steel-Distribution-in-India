@@ -24,22 +24,22 @@ function Container() {
     },
   ];
 
-  const scrollItems = [...items, ...items]; // Duplicate items for continuous scrolling
+  const scrollItems = [...items, ...items];
 
   useEffect(() => {
     const container = scrollContainerRef.current;
 
     const startAutoScroll = () => {
       scrollAnimationRef.current = requestAnimationFrame(() => {
-        container.scrollLeft += 1; // Adjust the scroll speed here
+        container.scrollLeft += 1;
         if (container.scrollLeft >= container.scrollWidth / 2) {
-          container.scrollLeft = 0; // Reset position for seamless looping
+          container.scrollLeft = 0;
         }
-        startAutoScroll(); // Continue auto-scrolling
+        startAutoScroll();
       });
     };
 
-    startAutoScroll(); // Start auto-scrolling
+    startAutoScroll();
 
     return () => {
       cancelAnimationFrame(scrollAnimationRef.current);
@@ -48,7 +48,6 @@ function Container() {
 
   return (
     <main className="m-4 ">
-      {/* First section */}
       <div className="flex items-start space-x-4 mb-8">
         <Link href="/">
           <div className="group relative border rounded-md bg-primary-foreground w-[62vw] h-[66vh] flex items-center justify-center overflow-hidden hover:border-blue-600 transition-all duration-300">
@@ -100,7 +99,6 @@ function Container() {
         </div>
       </div>
 
-      {/* Cloned section with scrolling */}
       <div className="overflow-x-auto scrollbar-hide" ref={scrollContainerRef}>
         <div className="flex space-x-4 mb-4">
           {scrollItems.map((item, index) => (
