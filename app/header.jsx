@@ -27,7 +27,7 @@ const Header = () => {
           </Link>
           <div className=" lg:pl-3 space-x-6 text-md font-mono hidden sm:flex">
             <Link
-              href="/"
+              href="/products"
               className="text-gray-500 hover:text-secondary-foreground hover:underline hover:underline-offset-4 transition-all duration-200"
             >
               All
