@@ -25,7 +25,7 @@ To run the project locally, follow these steps:
 
 2. **Navigate to the project directory:**
 
-   cd rcrs-website
+   cd RCRS-Revolutionizing-Steel-Distribution-in-India
 
 3. **Install dependencies:**
 

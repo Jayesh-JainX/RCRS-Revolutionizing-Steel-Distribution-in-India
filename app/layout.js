@@ -17,7 +17,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "RCRS Revolutionizing Steel Distribution",
+  title: "RCRS Revolutionizing Steel Distributor",
   description: "RCRS-Revolutionizing-Steel-Distribution-in-India",
 };
 

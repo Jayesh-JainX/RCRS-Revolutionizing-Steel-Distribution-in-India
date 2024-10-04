@@ -8,6 +8,7 @@ export default function Home() {
       <Main />
       <hr className="mx-4" />
       <Container />
+      <hr className="mx-4" />
       <Hero />
     </div>
   );
