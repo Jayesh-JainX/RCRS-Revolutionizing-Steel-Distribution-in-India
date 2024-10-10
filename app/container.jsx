@@ -22,6 +22,26 @@ function Container() {
       price: "15.99 Rs/pi",
       imgSrc: "./belt-1.png",
     },
+    {
+      name: "TMT Bar",
+      price: "25.99 Rs/pi",
+      imgSrc: "./TMT-Bar.jpg",
+    },
+    {
+      name: "T Iron",
+      price: "18.99 Rs/pi",
+      imgSrc: "./T-Iron.jpg",
+    },
+    {
+      name: "Steel Plate",
+      price: "22.49 Rs/pi",
+      imgSrc: "./Steel-Plate.png",
+    },
+    {
+      name: "Steel Item 1",
+      price: "14.49 Rs/pi",
+      imgSrc: "./stel-1.jpg",
+    },
   ];
 
   const scrollItems = [...items, ...items];
@@ -106,7 +126,7 @@ function Container() {
               <div className="group relative border rounded-md bg-primary-foreground w-[35vw] h-[32vh] flex items-center justify-center overflow-hidden hover:border-blue-600 transition-all duration-300">
                 <img
                   src={item.imgSrc}
-                  className="h-[25vh] w-[50vw] bg-transparent transition duration-300 ease-in-out group-hover:scale-105"
+                  className="h-[25vh] w-[50vw] px-10 bg-transparent transition duration-300 ease-in-out group-hover:scale-105"
                   alt={item.name}
                 />
                 <div className="absolute bottom-4 left-4 px-2 py-1 font-[family-name:var(--font-geist-sans)]">
