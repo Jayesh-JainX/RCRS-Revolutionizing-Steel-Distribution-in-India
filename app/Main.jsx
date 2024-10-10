@@ -67,9 +67,9 @@ function Main() {
       </div>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 mx-[11.2vw] mt-4 backdrop-blur-md ">
-        <div className="flex flex-col  items-center p-8 rounded-lg rounded-br-lg shadow-lg bg-primary-foreground -translate-y-10">
+        <div className="flex flex-col border transition-colors duration-300 ease-in-out hover:border-blue-500 items-center p-8 rounded-lg rounded-br-lg shadow-lg bg-primary-foreground -translate-y-10">
           <div className="relative mb-4">
-            <div className=" -inset-1  bg-blue-100 blur-lg" />
+            <div className="-inset-1 bg-blue-100 blur-lg" />
             <Telescope className="relative z-10 text-blue-600" size={40} />
           </div>
           <h2 className="text-lg text-center font-bold mb-2">Our Vision</h2>
@@ -80,7 +80,7 @@ function Main() {
           </p>
         </div>
 
-        <div className="flex flex-col items-center p-6 rounded-lg shadow-lg bg-blue-500 text-black -translate-y-16  ">
+        <div className="flex flex-col border transition-colors duration-300 ease-in-out hover:border-white items-center p-6 rounded-lg shadow-lg bg-blue-500 text-black -translate-y-16  ">
           <div className="relative mb-4">
             <div className="-inset-1 rounded-full bg-blue-300 blur-lg" />
             <Goal className="relative z-10 text-white" size={40} />
@@ -95,7 +95,7 @@ function Main() {
           </p>
         </div>
 
-        <div className="flex flex-col items-center p-8 rounded-lg rounded-bl-lg  shadow-lg bg-primary-foreground  -translate-y-10">
+        <div className="flex flex-col border transition-colors duration-300 ease-in-out hover:border-blue-500 items-center p-8 rounded-lg rounded-bl-lg  shadow-lg bg-primary-foreground  -translate-y-10">
           <div className="relative mb-4">
             <div className=" -inset-1 rounded-full bg-blue-100 blur-lg" />
             <Gem className="relative z-10 text-blue-600" size={40} />
