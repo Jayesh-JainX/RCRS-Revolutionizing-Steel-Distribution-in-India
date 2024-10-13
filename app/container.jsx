@@ -1,48 +1,11 @@
 "use client";
+import items from "@/lib/data";
 import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 
 function Container() {
   const scrollContainerRef = useRef(null);
   const scrollAnimationRef = useRef(null);
-
-  const items = [
-    {
-      name: "Saline Solution Steel",
-      price: "12.99 Rs/pi",
-      imgSrc: "./sheet-1.png",
-    },
-    {
-      name: "Rodes Item Steel",
-      price: "19.99 Rs/pi",
-      imgSrc: "./rodes-1.png",
-    },
-    {
-      name: "Belt Item Steel",
-      price: "15.99 Rs/pi",
-      imgSrc: "./belt-1.png",
-    },
-    {
-      name: "TMT Bar",
-      price: "25.99 Rs/pi",
-      imgSrc: "./TMT-Bar.jpg",
-    },
-    {
-      name: "T Iron",
-      price: "18.99 Rs/pi",
-      imgSrc: "./T-Iron.jpg",
-    },
-    {
-      name: "Steel Plate",
-      price: "22.49 Rs/pi",
-      imgSrc: "./Steel-Plate.png",
-    },
-    {
-      name: "Steel Item 1",
-      price: "14.49 Rs/pi",
-      imgSrc: "./stel-1.jpg",
-    },
-  ];
 
   const scrollItems = [...items, ...items];
 
@@ -69,49 +32,49 @@ function Container() {
   return (
     <main className="m-4 ">
       <div className="flex items-start space-x-4 mb-8">
-        <Link href="/">
+        <Link href={"/products" + items[0].link}>
           <div className="group relative border rounded-md bg-primary-foreground w-[62vw] h-[66vh] flex items-center justify-center overflow-hidden hover:border-blue-600 transition-all duration-300">
             <img
-              src="./sheet-1.png"
+              src={items[0].imgSrc}
               className="h-[50vh] w-[65vw] rotate-45 bg-transparent transition duration-300 ease-in-out group-hover:scale-105"
-              alt=""
+              alt={items[0].name}
             />
             <div className="absolute top-2/3 right-2/3 px-2 py-1 font-[family-name:var(--font-geist-sans)]">
-              Saline Solution Steel
+              {items[0].name}
               <span className="ml-2 text-secondary font-semibold bg-blue-500 rounded-full p-2">
-                12.99 Rs/pi
+                {items[0].price}
               </span>
             </div>
           </div>
         </Link>
 
         <div className=" flex flex-col space-y-4 ">
-          <Link href="/">
+          <Link href={"/products" + items[1].link}>
             <div className="group relative border rounded-md bg-primary-foreground w-[34.5vw] h-[32vh] flex items-center justify-center overflow-hidden hover:border-blue-600 transition-all duration-300">
               <img
-                src="./rodes-1.png"
+                src={items[1].imgSrc}
                 className="h-[25vh] w-[50vw] bg-transparent transition duration-300 ease-in-out group-hover:scale-105"
-                alt="Rodes Item Steel"
+                alt={items[1].name}
               />
               <div className="absolute bottom-4 left-4 px-2 py-1 font-[family-name:var(--font-geist-sans)]">
-                Rodes Item Steel
+                {items[1].name}
                 <span className="ml-2 text-secondary font-semibold bg-blue-500 rounded-full p-2">
-                  19.99 Rs/pi
+                  {items[1].price}
                 </span>
               </div>
             </div>
           </Link>
-          <Link href="/">
+          <Link href={"/products" + items[2].link}>
             <div className="group relative border rounded-md bg-primary-foreground w-[34.5vw] h-[32vh] flex items-center justify-center overflow-hidden hover:border-blue-600 transition-all duration-300">
               <img
-                src="./belt-1.png"
+                src={items[2].imgSrc}
                 className="h-[25vh] w-[50vw] bg-transparent transition duration-300 ease-in-out group-hover:scale-105"
-                alt="Belt Item Steel"
+                alt={items[2].name}
               />
               <div className="absolute bottom-4 left-4 px-2 py-1 font-[family-name:var(--font-geist-sans)]">
-                Belt Item Steel
+                {items[2].name}
                 <span className="ml-2 text-secondary font-semibold bg-blue-500 rounded-full p-2">
-                  15.99 Rs/pi
+                  {items[2].price}
                 </span>
               </div>
             </div>
@@ -122,7 +85,7 @@ function Container() {
       <div className="overflow-x-auto scrollbar-hide" ref={scrollContainerRef}>
         <div className="flex space-x-4 mb-4">
           {scrollItems.map((item, index) => (
-            <Link key={index} href="/">
+            <Link key={index} href={"/products" + item.link}>
               <div className="group relative border rounded-md bg-primary-foreground w-[35vw] h-[32vh] flex items-center justify-center overflow-hidden hover:border-blue-600 transition-all duration-300">
                 <img
                   src={item.imgSrc}

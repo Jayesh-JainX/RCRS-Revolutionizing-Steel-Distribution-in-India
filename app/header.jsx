@@ -1,59 +1,17 @@
 "use client";
 import { Input } from "@/components/ui/input";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { ModeToggle } from "./theme";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Headset, Search, Menu } from "lucide-react";
-
-const items = [
-  {
-    name: "Saline Solution Steel",
-    price: "12.99 Rs/pi",
-    imgSrc: "./sheet-1.png",
-    link: "/saline-solution-steel",
-  },
-  {
-    name: "Rodes Item Steel",
-    price: "19.99 Rs/pi",
-    imgSrc: "./rodes-1.png",
-    link: "/rodes-item-steel",
-  },
-  {
-    name: "Belt Item Steel",
-    price: "15.99 Rs/pi",
-    imgSrc: "./belt-1.png",
-    link: "/belt-item-steel",
-  },
-  {
-    name: "TMT Bar",
-    price: "25.99 Rs/pi",
-    imgSrc: "./TMT-Bar.jpg",
-    link: "/tmt-bar",
-  },
-  {
-    name: "T Iron",
-    price: "18.99 Rs/pi",
-    imgSrc: "./T-Iron.jpg",
-    link: "/t-iron",
-  },
-  {
-    name: "Steel Plate",
-    price: "22.49 Rs/pi",
-    imgSrc: "./Steel-Plate.png",
-    link: "/steel-plate",
-  },
-  {
-    name: "Steel Item 1",
-    price: "14.49 Rs/pi",
-    imgSrc: "./stel-1.jpg",
-    link: "/steel-item-1",
-  },
-];
+import items from "@/lib/data";
 
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [showRecommendations, setShowRecommendations] = useState(false);
+  const recommendationsRef = useRef(null);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -61,19 +19,41 @@ const Header = () => {
 
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
+    setShowRecommendations(e.target.value.length > 0);
   };
 
-  const filteredItems = items.filter((item) =>
-    item.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const filteredItems = items
+    .filter((item) =>
+      item.name.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+    .slice(0, 4);
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     if (searchQuery) {
-      // Redirect to search results page
       window.location.href = `/products?q=${encodeURIComponent(searchQuery)}`;
     }
   };
+
+  const handleRecommendationClick = () => {
+    setShowRecommendations(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        recommendationsRef.current &&
+        !recommendationsRef.current.contains(event.target)
+      ) {
+        setShowRecommendations(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <>
@@ -88,28 +68,28 @@ const Header = () => {
             </h1>
           </Link>
           <div className="lg:pl-3 space-x-6 text-md font-mono hidden sm:flex">
-            <Link
+            <a
               href="/products"
               className="text-gray-500 hover:text-secondary-foreground hover:underline hover:underline-offset-4 transition-all duration-200"
             >
               All
-            </Link>
-            <Link
-              href="/"
+            </a>
+            <a
+              href="/products?q=sheets"
               className="text-gray-500 hover:text-secondary-foreground hover:underline hover:underline-offset-4 transition-all duration-200"
             >
               Sheets
-            </Link>
-            <Link
-              href="/"
+            </a>
+            <a
+              href="/products?q=rolls"
               className="text-gray-500 hover:text-secondary-foreground hover:underline hover:underline-offset-4 transition-all duration-200"
             >
               Rolls
-            </Link>
+            </a>
           </div>
         </div>
 
-        <div className="relative flex-grow px-[10vw] ">
+        <div className="relative flex-grow px-[10vw]">
           <form onSubmit={handleSearchSubmit} className="flex items-center">
             <Input
               type="text"
@@ -126,13 +106,17 @@ const Header = () => {
               <Search />
             </Button>
           </form>
-          {searchQuery && filteredItems.length > 0 && (
-            <div className="absolute bg-primary-foreground border border-gray-500 rounded-lg mt-1 z-10 w-[30vw]">
+          {showRecommendations && filteredItems.length > 0 && (
+            <div
+              ref={recommendationsRef}
+              className="absolute bg-primary-foreground border border-gray-500 rounded-lg mt-1 z-10 w-[30vw]"
+            >
               {filteredItems.map((item, index) => (
                 <Link
                   key={index}
-                  href={item.link}
-                  className="flex items-center p-2 hover:bg-secondary "
+                  href={"/products" + item.link}
+                  className="flex items-center p-2 hover:bg-secondary"
+                  onClick={handleRecommendationClick}
                 >
                   <img
                     src={item.imgSrc}
