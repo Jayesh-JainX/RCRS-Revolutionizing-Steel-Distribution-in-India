@@ -1,8 +1,8 @@
 import React, { Suspense, lazy } from "react";
 import Main from "./Main";
 
-const LazyContainer = lazy(() => import("./Container"));
-const LazyHero = lazy(() => import("./Hero"));
+const LazyContainer = lazy(() => import("./ContainerPage"));
+const LazyHero = lazy(() => import("./HeroPage"));
 
 const Loading = () => (
   <div className="flex items-center justify-center h-screen">
