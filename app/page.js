@@ -10,6 +10,8 @@ const Loading = () => (
   </div>
 );
 
+//resolved
+
 export default function Home() {
   return (
     <div>
