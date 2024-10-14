@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { ModeToggle } from "./theme";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Headset, Search, Menu } from "lucide-react";
+import { Headset, Search, Menu, X } from "lucide-react";
 import items from "@/lib/data";
 
 const Header = () => {
@@ -12,9 +12,14 @@ const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [showRecommendations, setShowRecommendations] = useState(false);
   const recommendationsRef = useRef(null);
+  const sidebarRef = useRef(null);
 
   const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
+    setSidebarOpen((prev) => !prev);
+  };
+
+  const closeSidebar = () => {
+    setSidebarOpen(false);
   };
 
   const handleSearchChange = (e) => {
@@ -43,9 +48,12 @@ const Header = () => {
     const handleClickOutside = (event) => {
       if (
         recommendationsRef.current &&
-        !recommendationsRef.current.contains(event.target)
+        !recommendationsRef.current.contains(event.target) &&
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target)
       ) {
         setShowRecommendations(false);
+        setSidebarOpen(false);
       }
     };
 
@@ -55,8 +63,17 @@ const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // Disable scrolling when sidebar is open
+    if (sidebarOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [sidebarOpen]);
+
   return (
-    <>
+    <div>
       <header className="flex items-center justify-between p-4 shadow-md my-2 dark:shadow-sm dark:shadow-secondary">
         <div className="flex items-center space-x-4">
           <Link href="/" className="flex items-center space-x-3">
@@ -89,7 +106,7 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="relative flex-grow px-[10vw]">
+        <div className="relative flex-grow px-[10vw] hidden sm:block ">
           <form onSubmit={handleSearchSubmit} className="flex items-center">
             <Input
               type="text"
@@ -132,42 +149,135 @@ const Header = () => {
             </div>
           )}
         </div>
+        <span className="hidden sm:block">
+          <ModeToggle />
+        </span>
 
-        <ModeToggle className="hidden sm:block" />
-        <Button variant="link" className="ml-2 hover:no-underline">
-          <Headset />
-        </Button>
+        <Link
+          href="tel:+1234567890"
+          className="ml-2 hover:no-underline hidden sm:block "
+        >
+          <Button variant="link">
+            <Headset />
+          </Button>
+        </Link>
 
-        <Button onClick={toggleSidebar} className="sm:hidden">
+        <Button variant="ghost" onClick={toggleSidebar} className="sm:hidden">
           <Menu />
         </Button>
       </header>
 
       {sidebarOpen && (
-        <div className="fixed inset-0 bg-gray-800 bg-opacity-75 z-50 flex justify-end">
-          <div className="bg-white w-64 p-4">
-            <Button onClick={toggleSidebar} className="mb-4">
-              Close
-            </Button>
-            <div className="flex flex-col space-y-2">
-              <Link href="/" className="text-gray-500 hover:text-black">
-                All
-              </Link>
-              <Link href="/" className="text-gray-500 hover:text-black">
-                Sheets
-              </Link>
-              <Link href="/" className="text-gray-500 hover:text-black">
-                Rolls
-              </Link>
-              <ModeToggle className="mt-4" />
-              <Button variant="link" className="mt-2 hover:no-underline">
-                <Headset />
+        <div
+          className="fixed inset-0 bg-gray-800 bg-opacity-75 z-50 flex justify-end"
+          onClick={toggleSidebar}
+        >
+          <div
+            ref={sidebarRef}
+            className="bg-secondary w-[80vw] p-4 flex flex-col h-full rounded-l"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <span className="font-bold text-xl">Menu</span>
+              <Button variant="ghost" onClick={toggleSidebar}>
+                <X className="w-5 h-5" />
               </Button>
             </div>
+
+            <hr className="mb-3 shadow-md dark:border-gray-400" />
+
+            {/* Search Bar in Sidebar */}
+            <form onSubmit={handleSearchSubmit} className="mb-4">
+              <Input
+                type="text"
+                placeholder="Search products..."
+                value={searchQuery}
+                onChange={handleSearchChange}
+                className="w-full h-10 rounded-lg"
+              />
+              {showRecommendations && filteredItems.length > 0 && (
+                <div
+                  ref={recommendationsRef}
+                  className="absolute bg-primary-foreground border border-gray-500 rounded-lg mt-1 z-10 w-full"
+                >
+                  {filteredItems.map((item, index) => (
+                    <Link
+                      key={index}
+                      href={"/products" + item.link}
+                      className="flex items-center p-2 hover:bg-secondary"
+                      onClick={handleRecommendationClick}
+                    >
+                      <img
+                        src={item.imgSrc}
+                        alt={item.name}
+                        className="h-10 w-10 rounded"
+                      />
+                      <div className="ml-2">
+                        <p className="font-semibold">{item.name}</p>
+                        <p className="text-gray-500">{item.price}</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </form>
+
+            <div className="flex flex-col space-y-4 mt-2 mb-auto">
+              <Link href="/products" onClick={closeSidebar}>
+                All Products
+              </Link>
+              <Link href="/products?q=sheets" onClick={closeSidebar}>
+                Sheets
+              </Link>
+              <Link href="/products?q=rolls" onClick={closeSidebar}>
+                Rolls
+              </Link>
+
+              <Link href="/about" onClick={closeSidebar}>
+                About Us
+              </Link>
+              <Link
+                href="tel:+1234567890"
+                className="hover:text-black"
+                onClick={closeSidebar}
+              >
+                Contact
+              </Link>
+              <Link href="/terms-conditions" onClick={closeSidebar}>
+                Terms & Conditions
+              </Link>
+              <Link href="/shipping-return-policy" onClick={closeSidebar}>
+                Shipping & Returns
+              </Link>
+              <Link href="/privacy-policy" onClick={closeSidebar}>
+                Privacy Policy
+              </Link>
+
+              <hr className="mt-3" />
+
+              <div className="flex flex-row items-center justify-center pt-8">
+                <ModeToggle className="mt-4" />
+                <Link
+                  href="tel:+1234567890"
+                  className="hover:no-underline"
+                  onClick={closeSidebar}
+                >
+                  <Button variant="link">
+                    <Headset />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            <Link href={"/"} onClick={closeSidebar}>
+              <div className="mt-auto mb-4 text-center font-extrabold">
+                RCRS
+              </div>
+            </Link>
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

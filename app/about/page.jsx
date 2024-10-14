@@ -13,8 +13,8 @@ const AboutUs = () => {
         efficiency and promoting sustainability.
       </p>
 
-      <div className="flex items-start justify-between mb-8 mx-10">
-        <div className="w-1/2 p-4 mx-28">
+      <div className="flex flex-col md:flex-row items-start justify-between mb-8 mx-2 md:mx-10">
+        <div className="w-full md:w-1/2 p-4">
           <h2 className="text-5xl mt-1 font-serif font-bold mb-4">
             Hindustan Iron Store
           </h2>
@@ -32,7 +32,7 @@ const AboutUs = () => {
           </p>
         </div>
 
-        <div className="w-1/2 p-4">
+        <div className="w-full md:w-1/2 p-4">
           <img
             src="/Hindustan-Iron-Store-Slider-1.jpg"
             alt="Steel Distribution"

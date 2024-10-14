@@ -50,15 +50,15 @@ function FAQ() {
   ];
 
   return (
-    <div className="px-28 p-5">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-28 py-5">
       <h1 className="text-2xl font-bold text-center mb-5">
         Frequently Asked Questions
       </h1>
-      <div className="space-y-6 ">
+      <div className="space-y-6">
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="p-4 border  rounded-lg shadow  transition"
+            className="p-4 border rounded-lg shadow transition hover:shadow-lg"
           >
             <h2 className="text-lg font-semibold text-blue-600">
               {faq.question}

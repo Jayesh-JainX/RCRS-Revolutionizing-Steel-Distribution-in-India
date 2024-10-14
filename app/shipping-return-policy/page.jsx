@@ -2,7 +2,7 @@ import React from "react";
 
 const ShippingReturnPolicyPage = () => {
   return (
-    <div className="container px-28 p-6 rounded-lg shadow-md ">
+    <div className="container mx-auto px-4 md:px-28 p-6 rounded-lg shadow-md">
       <h1 className="text-4xl font-bold mb-8 text-center">
         Shipping and Return Policy
       </h1>

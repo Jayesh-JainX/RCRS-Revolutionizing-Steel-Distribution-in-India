@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Footer from "./footer";
 import { structuredData } from "@/lib/structuredData";
 import Script from "next/script";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -83,6 +84,7 @@ export default function RootLayout({ children }) {
         >
           <Header />
           {children}
+          <SpeedInsights />
           <Footer />
           <Analytics />
         </ThemeProvider>
