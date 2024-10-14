@@ -33,7 +33,6 @@ function Main() {
 
   return (
     <div className="relative mt-4">
-      {/* Slider */}
       <div className="relative overflow-hidden rounded-lg shadow-lg">
         <div
           className="flex transition-transform duration-500 ease-in-out"
@@ -80,7 +79,7 @@ function Main() {
           </p>
         </div>
 
-        <div className="flex flex-col border transition-colors duration-300 ease-in-out hover:border-white items-center p-6 rounded-lg shadow-lg bg-blue-500 text-black -translate-y-16  ">
+        <div className="flex flex-col transition-colors duration-300 ease-in-out hover:border border-white items-center p-6 rounded-lg shadow-lg bg-blue-500 text-black -translate-y-16  ">
           <div className="relative mb-4">
             <div className="-inset-1 rounded-full bg-blue-300 blur-lg" />
             <Goal className="relative z-10 text-white" size={40} />

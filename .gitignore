@@ -31,7 +31,9 @@ yarn-error.log*
 
 # Auto Generated PWA files
 **/public/sw.js
+**/public/sw.js.map
 **/public/workbox-*.js
+**/public/workbox-e43f5367.js.map
 
 # vercel
 .vercel

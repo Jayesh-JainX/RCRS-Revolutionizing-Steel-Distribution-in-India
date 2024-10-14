@@ -53,11 +53,12 @@ function Hero() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {products.map((product, index) => (
-          <Link key={index} href={`/products${product.link}`}>
-            <div
-              key={product.id}
-              className="product bg-primary-foreground p-6 rounded-lg border hover:border-blue-500 shadow text-center w-full flex flex-col"
-            >
+          <Link
+            key={index}
+            href={`/products${product.link}`}
+            className="product bg-primary-foreground p-6 rounded-lg border hover:border-blue-500 shadow text-center w-full flex flex-col"
+          >
+            <div key={product.id}>
               {renderIcon(product.icon)}
               <h2 className="text-xl font-semibold">{product.name}</h2>
               <p className="mt-2 mb-4">{product.description}</p>

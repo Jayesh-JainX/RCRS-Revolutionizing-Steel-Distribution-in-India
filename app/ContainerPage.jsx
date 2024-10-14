@@ -92,9 +92,9 @@ function Container() {
                   className="h-[25vh] w-[50vw] px-10 bg-transparent transition duration-300 ease-in-out group-hover:scale-105"
                   alt={item.name}
                 />
-                <div className="absolute bottom-4 left-4 px-2 py-1 font-[family-name:var(--font-geist-sans)]">
-                  {item.name}
-                  <span className="ml-2 text-secondary font-semibold bg-blue-500 rounded-full p-2">
+                <div className="absolute bottom-4 left-4 px-2 py-2 font-[family-name:var(--font-geist-sans)] dark:bg-gray-600 bg-slate-200  rounded-3xl ">
+                  <span>{item.name}</span>
+                  <span className="ml-2 text-secondary font-semibold bg-blue-500 rounded-3xl p-2">
                     {item.price}
                   </span>
                 </div>

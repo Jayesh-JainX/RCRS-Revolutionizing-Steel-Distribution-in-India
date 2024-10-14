@@ -5,6 +5,8 @@ import NextTopLoader from "nextjs-toploader";
 import Header from "./header";
 import { Analytics } from "@vercel/analytics/react";
 import Footer from "./footer";
+import { structuredData } from "@/lib/structuredData";
+import Script from "next/script";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,14 +20,43 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "RCRS Revolutionizing Steel Distributor",
-  description: "RCRS-Revolutionizing-Steel-Distribution-in-India",
+  title: "RCRS: Revolutionizing Steel Distribution in India",
+  description:
+    "RCRS is your trusted partner for innovative steel distribution solutions in India, providing quality products, timely delivery, and exceptional service.",
+  keywords:
+    "Steel Distributor, Steel Supply, RCRS, Steel Products, India, Steel Distribution",
+  author: "RCRS Team",
+  robots: "index, follow",
+  openGraph: {
+    title: "RCRS: Revolutionizing Steel Distribution in India",
+    description:
+      "RCRS provides quality steel distribution services across India.",
+    url: "https://rcrs.vercel.app", // replace with your actual URL
+    image: "/Hindustan-Iron-Store-Slider-1.jpg", // replace with your actual Open Graph image
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "RCRS: Revolutionizing Steel Distribution in India",
+    description:
+      "RCRS provides quality steel distribution services across India.",
+    image: "/Hindustan-Iron-Store-Slider-1.jpg", // replace with your actual Twitter image
+  },
   manifest: "/manifest.json",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <Script type="application/ld+json">
+          {JSON.stringify(structuredData.organization)}
+        </Script>
+        {structuredData.products.map((product, index) => (
+          <Script key={index} type="application/ld+json">
+            {JSON.stringify(product)}
+          </Script>
+        ))}
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -56,6 +87,15 @@ export default function RootLayout({ children }) {
           <Analytics />
         </ThemeProvider>
       </body>
+      <Script type="application/ld+json">
+        {JSON.stringify(structuredData.organization)}
+      </Script>
+
+      {structuredData.products.map((product, index) => (
+        <Script key={index} type="application/ld+json">
+          {JSON.stringify(product)}
+        </Script>
+      ))}
     </html>
   );
 }
