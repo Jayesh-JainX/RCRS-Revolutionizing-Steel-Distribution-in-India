@@ -18,7 +18,7 @@ const ProductPage = () => {
     .slice(0, 3);
 
   return (
-    <div className="p-8 bg-background text-foreground">
+    <div className="m-4 sm:p-8 bg-background text-foreground">
       {product ? (
         <>
           <div className="flex flex-col md:flex-row mb-4">
@@ -26,7 +26,7 @@ const ProductPage = () => {
               <img
                 src={product.imgSrc}
                 alt={product.name}
-                className="w-[30vw] rounded h-[40vh] object-fill"
+                className="sm:w-[30vw] rounded sm:h-[40vh] object-fill"
                 loading="lazy"
               />
             </div>
@@ -87,12 +87,12 @@ const ProductPage = () => {
         )}
       </div>
       <div className="text-center mt-6">
-        <Link
+        <a
           href="/products"
           className="inline-block text-blue-500 hover:underline"
         >
           See More Products
-        </Link>
+        </a>
       </div>
     </div>
   );

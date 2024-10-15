@@ -27,7 +27,7 @@ const ProductsPage = () => {
   const fallbackRecommendations = items.slice(0, 3);
 
   return (
-    <div className="p-8 bg-background text-foreground">
+    <div className=" m-4 sm:p-8 bg-background text-foreground">
       <h1 className="text-2xl font-bold mb-4 font-[family-name:var(--font-geist-sans)]">
         Products
       </h1>
@@ -86,12 +86,12 @@ const ProductsPage = () => {
                 </Link>
               ))}
             </div>
-            <Link
+            <a
               href="/products"
               className="mt-6 text-blue-600 hover:underline font-semibold"
             >
               See All Products
-            </Link>
+            </a>
           </div>
         )}
       </div>

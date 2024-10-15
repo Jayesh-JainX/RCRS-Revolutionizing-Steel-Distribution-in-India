@@ -35,12 +35,14 @@ const Header = () => {
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
+    toggleSidebar();
     if (searchQuery) {
       window.location.href = `/products?q=${encodeURIComponent(searchQuery)}`;
     }
   };
 
   const handleRecommendationClick = () => {
+    toggleSidebar();
     setShowRecommendations(false);
   };
 
@@ -48,12 +50,11 @@ const Header = () => {
     const handleClickOutside = (event) => {
       if (
         recommendationsRef.current &&
-        !recommendationsRef.current.contains(event.target) &&
-        sidebarRef.current &&
-        !sidebarRef.current.contains(event.target)
+        !recommendationsRef.current.contains(event.target) && // Check if click is outside recommendations
+        document.querySelector('input[type="text"]') && // Ensure input exists
+        !document.querySelector('input[type="text"]').contains(event.target) // Check if click is outside the input
       ) {
-        setShowRecommendations(false);
-        setSidebarOpen(false);
+        setShowRecommendations(false); // Hide recommendations
       }
     };
 
@@ -113,6 +114,7 @@ const Header = () => {
               placeholder="Search for products..."
               value={searchQuery}
               onChange={handleSearchChange}
+              onFocus={() => setShowRecommendations(true)}
               className="w-[30vw] h-10 hover:border-gray-500 rounded-lg"
             />
             <Button
@@ -169,7 +171,7 @@ const Header = () => {
 
       {sidebarOpen && (
         <div
-          className="fixed inset-0 bg-gray-800 bg-opacity-75 z-50 flex justify-end"
+          className="sm:hidden fixed inset-0 bg-gray-800 bg-opacity-75 z-50 flex justify-end"
           onClick={toggleSidebar}
         >
           <div
@@ -186,19 +188,19 @@ const Header = () => {
 
             <hr className="mb-3 shadow-md dark:border-gray-400" />
 
-            {/* Search Bar in Sidebar */}
             <form onSubmit={handleSearchSubmit} className="mb-4">
               <Input
                 type="text"
                 placeholder="Search products..."
                 value={searchQuery}
                 onChange={handleSearchChange}
+                onFocus={() => setShowRecommendations(true)}
                 className="w-full h-10 rounded-lg"
               />
               {showRecommendations && filteredItems.length > 0 && (
                 <div
                   ref={recommendationsRef}
-                  className="absolute bg-primary-foreground border border-gray-500 rounded-lg mt-1 z-10 w-full"
+                  className="absolute bg-primary-foreground border border-gray-500 rounded-lg mt-1 z-10 w-[71vw]"
                 >
                   {filteredItems.map((item, index) => (
                     <Link
@@ -223,15 +225,15 @@ const Header = () => {
             </form>
 
             <div className="flex flex-col space-y-4 mt-2 mb-auto">
-              <Link href="/products" onClick={closeSidebar}>
+              <a href="/products" onClick={closeSidebar}>
                 All Products
-              </Link>
-              <Link href="/products?q=sheets" onClick={closeSidebar}>
+              </a>
+              <a href="/products?q=sheets" onClick={closeSidebar}>
                 Sheets
-              </Link>
-              <Link href="/products?q=rolls" onClick={closeSidebar}>
+              </a>
+              <a href="/products?q=rolls" onClick={closeSidebar}>
                 Rolls
-              </Link>
+              </a>
 
               <Link href="/about" onClick={closeSidebar}>
                 About Us

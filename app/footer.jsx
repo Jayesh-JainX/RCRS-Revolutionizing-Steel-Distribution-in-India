@@ -168,7 +168,7 @@ function Footer() {
 
         <hr />
         <div className="flex item-center justify-between mt-2">
-          <span className="ml-0 md:ml-16">
+          <span className="ml-0 mr-5 md:ml-16">
             © 2023-2024 Steel Store, Inc. All rights reserved. | Related to:
             Steel Products, Manufacturing, Supply Chain
           </span>
