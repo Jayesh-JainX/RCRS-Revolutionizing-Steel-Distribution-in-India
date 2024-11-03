@@ -55,9 +55,13 @@ function Hero() {
           <Link
             key={index}
             href={`/products${product.link}`}
-            className="product bg-primary-foreground p-4 md:p-6 rounded-lg border hover:border-blue-500 shadow text-center w-full flex flex-col"
+            className="relative overflow-hidden product bg-primary-foreground p-4 md:p-6 rounded-lg border hover:border-blue-500 shadow text-center w-full flex flex-col group"
           >
-            <div key={product.id}>
+            <div
+              className="absolute inset-0 bg-cover bg-center blur-0 transition-opacity duration-200 ease-in-out opacity-0 group-hover:opacity-60" // Added transition properties
+              style={{ backgroundImage: `url(${product.img})` }}
+            />
+            <div className="relative z-10">
               {renderIcon(product.icon)}
               <h2 className="text-lg md:text-xl font-semibold">
                 {product.name}

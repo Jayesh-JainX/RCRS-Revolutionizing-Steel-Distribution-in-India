@@ -4,8 +4,14 @@ import React, { useState, useEffect, useRef } from "react";
 import { ModeToggle } from "./theme";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Headset, Search, Menu, X } from "lucide-react";
+import { Headset, Search, Menu, X, Mail } from "lucide-react";
 import items from "@/lib/data";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -77,32 +83,41 @@ const Header = () => {
     <div>
       <header className="flex items-center justify-between p-4 shadow-md my-2 dark:shadow-sm dark:shadow-secondary">
         <div className="flex items-center space-x-4">
-          <Link href="/" className="flex items-center space-x-3">
-            <div className="h-8 w-8 bg-blue-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">R</span>
-            </div>
-            <h1 className="text-md font-semibold font-[family-name:var(--font-geist-sans)]">
-              RCRS STORE
-            </h1>
+          <Link href="/">
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger className="flex items-center space-x-3">
+                  <div className="h-8 w-8 bg-blue-500 rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold">R</span>
+                  </div>
+                  <h1 className="text-md font-semibold font-[family-name:var(--font-geist-sans)]">
+                    RCRS STORE
+                  </h1>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Home</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </Link>
           <div className="lg:pl-3 space-x-6 text-md font-mono hidden sm:flex">
+            <a
+              href="/about"
+              className="text-gray-500 hover:text-secondary-foreground hover:underline hover:underline-offset-4 transition-all duration-200"
+            >
+              About
+            </a>
             <a
               href="/products"
               className="text-gray-500 hover:text-secondary-foreground hover:underline hover:underline-offset-4 transition-all duration-200"
             >
-              All
+              Products
             </a>
             <a
-              href="/products?q=sheets"
+              href="/contact"
               className="text-gray-500 hover:text-secondary-foreground hover:underline hover:underline-offset-4 transition-all duration-200"
             >
-              Sheets
-            </a>
-            <a
-              href="/products?q=rolls"
-              className="text-gray-500 hover:text-secondary-foreground hover:underline hover:underline-offset-4 transition-all duration-200"
-            >
-              Rolls
+              Contact
             </a>
           </div>
         </div>
@@ -151,18 +166,19 @@ const Header = () => {
             </div>
           )}
         </div>
+
         <span className="hidden sm:block">
           <ModeToggle />
         </span>
 
-        <Link
+        <a
           href="tel:+1234567890"
           className="ml-2 hover:no-underline hidden sm:block "
         >
           <Button variant="link">
             <Headset />
           </Button>
-        </Link>
+        </a>
 
         <Button variant="ghost" onClick={toggleSidebar} className="sm:hidden">
           <Menu />
@@ -239,7 +255,7 @@ const Header = () => {
                 About Us
               </Link>
               <Link
-                href="tel:+1234567890"
+                href="/contact"
                 className="hover:text-black"
                 onClick={closeSidebar}
               >
@@ -259,7 +275,16 @@ const Header = () => {
 
               <div className="flex flex-row items-center justify-center pt-8">
                 <ModeToggle className="mt-4" />
-                <Link
+                <a
+                  href="mailto:youremail@example.com"
+                  className="hover:no-underline"
+                  onClick={closeSidebar}
+                >
+                  <Button variant="link">
+                    <Mail />
+                  </Button>
+                </a>
+                <a
                   href="tel:+1234567890"
                   className="hover:no-underline"
                   onClick={closeSidebar}
@@ -267,7 +292,7 @@ const Header = () => {
                   <Button variant="link">
                     <Headset />
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
 

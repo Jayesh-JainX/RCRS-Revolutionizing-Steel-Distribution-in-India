@@ -8,6 +8,8 @@ import Footer from "./footer";
 import { structuredData } from "@/lib/structuredData";
 import Script from "next/script";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Toaster } from "@/components/ui/toaster";
+import { ToastDemo } from "./components/ToastPage";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -84,6 +86,8 @@ export default function RootLayout({ children }) {
         >
           <Header />
           {children}
+          <Toaster />
+          <ToastDemo />
           <SpeedInsights />
           <Footer />
           <Analytics />

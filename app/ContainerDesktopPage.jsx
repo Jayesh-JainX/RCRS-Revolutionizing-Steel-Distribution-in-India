@@ -1,4 +1,5 @@
 "use client";
+import company_names from "@/lib/company";
 import items from "@/lib/data";
 import Link from "next/link";
 import React, { useEffect, useRef } from "react";
@@ -7,7 +8,7 @@ function ContainerDesktop() {
   const scrollContainerRef = useRef(null);
   const scrollAnimationRef = useRef(null);
 
-  const scrollItems = [...items, ...items];
+  const scrollItems = [...company_names, ...company_names];
 
   useEffect(() => {
     const container = scrollContainerRef.current;
@@ -89,21 +90,15 @@ function ContainerDesktop() {
         >
           <div className="flex space-x-4 mb-4">
             {scrollItems.map((item, index) => (
-              <Link key={index} href={"/products" + item.link}>
+              <div key={index}>
                 <div className="group relative border rounded-md bg-primary-foreground w-[35vw] h-[32vh] flex items-center justify-center overflow-hidden hover:border-blue-600 transition-all duration-300">
                   <img
                     src={item.imgSrc}
-                    className="h-[25vh] w-[50vw] px-10 bg-transparent transition duration-300 ease-in-out group-hover:scale-105"
+                    className=" w-[50vw] bg-cover px-10 bg-transparent transition duration-300 ease-in-out group-hover:scale-105"
                     alt={item.name}
                   />
-                  <div className="absolute bottom-4 left-4 px-2 py-2 font-[family-name:var(--font-geist-sans)] dark:bg-gray-600 bg-slate-200  rounded-3xl ">
-                    <span>{item.name}</span>
-                    <span className="ml-2 text-secondary font-semibold bg-blue-500 rounded-3xl p-2">
-                      {item.price}
-                    </span>
-                  </div>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>{" "}
