@@ -52,14 +52,6 @@ export default function AboutUs() {
           />
         </div>
       </div>
-      {/* <span className="text-center text-sm my-4 mx-2 text-muted-foreground">
-        At Hindustan Iron Store, we are committed to delivering exceptional
-        products that meet the highest industry standards. Our extensive
-        experience and dedication to quality ensure that our clients receive the
-        best materials for their construction needs. Trust us to provide you
-        with reliable, durable, and high-performance products that stand the
-        test of time.
-      </span> */}
     </div>
   );
 }

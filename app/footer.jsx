@@ -48,6 +48,14 @@ function Footer() {
               <ul className="flex flex-col">
                 <li>
                   <Link
+                    href="/contact"
+                    className="block p-2 hover:text-black hover:underline dark:hover:text-neutral-300"
+                  >
+                    Contact Us
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/shipping-return-policy"
                     className="block p-2 hover:text-black hover:underline dark:hover:text-neutral-300"
                   >
@@ -60,14 +68,6 @@ function Footer() {
                     className="block p-2 hover:text-black hover:underline dark:hover:text-neutral-300"
                   >
                     Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/faq"
-                    className="block p-2 hover:text-black hover:underline dark:hover:text-neutral-300"
-                  >
-                    FAQ
                   </Link>
                 </li>
               </ul>

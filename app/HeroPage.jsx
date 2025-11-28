@@ -15,7 +15,7 @@ import products from "@/lib/products";
 
 function Hero() {
   const renderIcon = (iconName) => {
-    const iconProps = "mx-auto mb-4 text-blue-500 h-10 w-10"; // Adjusted size for mobile
+    const iconProps = "mx-auto mb-4 text-blue-500 h-10 w-10";
     switch (iconName) {
       case "BarChart2":
         return <BarChart2 className={iconProps} />;
@@ -46,8 +46,8 @@ function Hero() {
         OUR PRODUCTS
       </h1>
       <p className="text-center mb-6 text-sm md:text-base">
-        Hindustan Iron Store has 40+ years of experience in providing
-        world-class products to our clients.
+        RCRS has 60+ years of experience in providing world-class products to
+        our clients.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
