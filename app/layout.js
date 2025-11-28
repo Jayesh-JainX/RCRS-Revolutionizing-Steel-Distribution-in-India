@@ -42,7 +42,7 @@ export const metadata = {
     title: "RCRS: Revolutionizing Steel Distribution in India",
     description:
       "RCRS provides quality steel distribution services across India.",
-    image: "/Hindustan-Iron-Store-Slider-1.jpg", // replace with your actual Twitter image
+    image: "/Hindustan-Iron-Store-Slider-1.jpg",
   },
   manifest: "/manifest.json",
 };

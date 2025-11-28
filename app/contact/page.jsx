@@ -97,25 +97,6 @@ const ContactUs = () => {
               <strong>Address:</strong> Near Devkali bypass, Ayodhya, Uttar
               Pradesh, India
             </p>
-
-            {/* <h2 className="text-3xl font-semibold mb-4 font-[family-name:var(--font-geist-sans)]">
-              Follow Us
-            </h2>
-            <p className="mb-4 font-[family-name:var(--font-geist-sans)]">
-              Stay updated with our latest news and initiatives by following us
-              on our social media channels.
-            </p>
-            <div className="flex space-x-4 mb-4 font-[family-name:var(--font-geist-sans)]">
-              <a href="#" target="blank" className="text-blue-500">
-                Facebook
-              </a>
-              <a href="#" className="text-blue-500">
-                Twitter
-              </a>
-              <a href="#" className="text-blue-500">
-                LinkedIn
-              </a>
-            </div> */}
           </div>
         </div>
       </div>
