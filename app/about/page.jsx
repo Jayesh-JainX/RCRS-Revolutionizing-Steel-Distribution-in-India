@@ -5,30 +5,34 @@ const AboutUs = () => {
     <div className="container mx-auto p-6 rounded-lg shadow-md">
       <h1 className="text-4xl font-bold text-center mb-8">About RCRS</h1>
       <p className="text-lg text-center mb-6">
-        At RCRS, we are pioneering a new era in steel distribution across India.
-        Our mission is to optimize the supply chain, ensuring that high-quality
-        steel is readily available for all sectors, from construction to
-        manufacturing. With an unwavering commitment to excellence and customer
-        satisfaction, we strive to reshape the industry by enhancing operational
-        efficiency and promoting sustainability.
+        At Ram Chander Radhey Shyam Jaiswal (RCRS), we are pioneering a new era
+        in steel distribution across India. Our mission is to optimize the
+        supply chain, ensuring that high-quality steel is readily available for
+        all sectors, from construction to manufacturing. With an unwavering
+        commitment to excellence and customer satisfaction, we strive to reshape
+        the industry by enhancing operational efficiency and promoting
+        sustainability.
       </p>
 
       <div className="flex flex-col md:flex-row items-start justify-between mb-8 mx-2 md:mx-10">
         <div className="w-full md:w-1/2 p-4">
           <h2 className="text-5xl mt-1 font-serif font-bold mb-4">
-            Hindustan Iron Store
+            Rcrs Iron Store
           </h2>
           <span className="bg-blue-500 p-1 rounded-lg shadow-lg mx-2"></span>
-          <span className="font-bold">Since 1981</span>
+          <span className="font-bold">
+            Your Trusted Iron & Steel Partner Since 1960
+          </span>
           <p className="mt-4 font-sans">
-            Founded in Khurja, Uttar Pradesh, Hindustan Iron Store has long
-            stood as a hallmark of quality in iron and steel distribution.
-            Established by Shri Umesh Garg (1953-2020), our legacy is built on
-            principles of safety, cost-effectiveness, and trust. With over 40
-            years of experience, we have consistently embraced cutting-edge
-            technology, allowing us to deliver exceptional products and services
-            to our esteemed clientele across India. Our dedication to continuous
-            improvement and innovation has made us a leader in the industry.
+            Founded in 1960 in Ayodhya, Uttar Pradesh, our family-run iron &
+            steel enterprise has been a trusted supplier of high-quality TMT
+            bars, angles, channels, flats, plates, and structural materials for
+            over six decades. As authorised dealers of leading brands such as
+            SAIL, Jindal, JSW, and Apollo, we provide reliable products at
+            competitive prices to contractors, fabricators, builders, and
+            industries across India. With a legacy built on honesty, timely
+            service, and customer commitment, we continue to deliver strong
+            foundations for projects of every scale.
           </p>
         </div>
 
