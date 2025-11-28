@@ -33,10 +33,10 @@ const ProductPage = () => {
             <div className="flex flex-col justify-start">
               <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
               <p className="text-lg font-semibold mb-2">
-                <span className="text-blue-500">{product.price}</span>
+                <span className="text-blue-500">{product.short}</span>
               </p>
-              <p className="mt-4">{product.description}</p>
-              <p className="mt-4 text-md text-gray-700">
+              <p className="mt-2">{product.description}</p>
+              <p className="mt-2 text-md text-gray-700">
                 For inquiries, please{" "}
                 <a
                   href="tel:+91-9044944111"
@@ -82,11 +82,11 @@ const ProductPage = () => {
                 <img
                   src={recItem.imgSrc}
                   alt={recItem.name}
-                  className="h-48 w-auto object-cover rounded mb-2"
+                  className="h-56 w-auto object-cover rounded mb-2"
                   loading="lazy"
                 />
                 <h3 className="text-lg font-semibold mt-2">{recItem.name}</h3>
-                <p className="text-gray-600">{recItem.price}</p>
+                <p className="text-gray-600">{recItem.short}</p>
               </div>
             </Link>
           ))

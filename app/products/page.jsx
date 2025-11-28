@@ -14,7 +14,7 @@ const ProductsPage = () => {
     const query = new URLSearchParams(window.location.search).get("q");
     if (query) {
       setSearchTerm(query);
-      // Scroll to the top with smooth behavior
+
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
     setLoading(false);
@@ -51,7 +51,7 @@ const ProductsPage = () => {
                   src={item.imgSrc}
                   alt={item.name}
                   loading="lazy"
-                  className="h-[25vh] w-full object-fill rounded transition duration-300 ease-in-out transform hover:scale-105"
+                  className="h-72 w-full object-fill rounded transition duration-300 ease-in-out transform hover:scale-105"
                 />
                 <h2 className="text-lg font-semibold mt-2">{item.name}</h2>
                 <p className="text-gray-600">{item.price}</p>
