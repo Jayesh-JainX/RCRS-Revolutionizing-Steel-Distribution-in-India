@@ -26,7 +26,7 @@ export default function AboutUs() {
             Hindustan Iron Store
           </h2>
           <span className="bg-blue-500 p-1 rounded-lg shadow-lg mx-2"></span>
-          <span className="font-bold text-lg ">Since 1981</span>
+          <span className="font-bold text-lg ">Since 1960</span>
           <p className="mt-4 font-sans text-sm md:text-md ">
             Founded in Khurja, Uttar Pradesh, Hindustan Iron Store has long
             stood as a hallmark of quality in iron and steel distribution.
