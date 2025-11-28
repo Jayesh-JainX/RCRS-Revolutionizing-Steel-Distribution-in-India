@@ -97,7 +97,9 @@ const AboutUs = () => {
       </section>
 
       <section className="mb-8 bg-primary-foreground p-4 rounded-lg">
-        <h2 className="text-3xl font-semibold mb-4">Join Us on Our Journey</h2>
+        <h2 className="text-3xl font-semibold mb-4">
+          Your journey, Our constant support
+        </h2>
         <p className="mb-4">
           At RCRS, we are always looking to expand our horizons. Whether you are
           a supplier, partner, or customer, we invite you to join us on our

@@ -64,13 +64,12 @@ const ContactUs = () => {
   return (
     <div>
       <h1 className="text-4xl font-bold text-center mb-4 pt-2">Contact Us</h1>
-      <p className="text-center mb-6 font-[family-name:var(--font-geist-sans)]">
+      <p className="text-center mb-6 font-[family-name:var(--font-geist-sans)] px-2">
         We're here to assist you with any inquiries or support you may need.
         Feel free to reach out using the information below or by filling out the
         contact form.
       </p>
-      <div className="container mx-auto p-6 rounded-lg shadow-md flex flex-col md:flex-row">
-        {/* Left Half - Contact Details */}
+      <div className="container mx-auto p-6 rounded-lg shadow-md flex justify-center flex-col md:flex-row md:space-x-6">
         <div className="relative border rounded-xl sm:mx-6 md:w-1/2 p-6 overflow-hidden my-4 sm:my-0 flex flex-col justify-between h-full">
           <div className="relative z-10 flex-grow">
             <h2 className=" text-3xl font-semibold mb-4 font-[family-name:var(--font-geist-sans)]">
@@ -87,19 +86,19 @@ const ContactUs = () => {
             </h2>
             <p className="mb-4 font-[family-name:var(--font-geist-sans)]">
               <strong>Email:</strong>{" "}
-              <a href="mailto:info@rcrs.com" className="text-blue-500">
-                info@rcrs.com
+              <a href="mailto:rcrsjaiswal@gmail.com" className="text-blue-500">
+                rcrsjaiswal@gmail.com
               </a>
             </p>
             <p className="mb-4 font-[family-name:var(--font-geist-sans)]">
-              <strong>Phone:</strong> +91-XXXXXXXXXX
+              <strong>Phone:</strong> +91-9044944111
             </p>
-            <p className="mb-4 font-[family-name:var(--font-geist-sans)]">
-              <strong>Address:</strong> 123 Steel Lane, Khurja, Uttar Pradesh,
-              India
+            <p className="mb-2 font-[family-name:var(--font-geist-sans)]">
+              <strong>Address:</strong> Near Devkali bypass, Ayodhya, Uttar
+              Pradesh, India
             </p>
 
-            <h2 className="text-3xl font-semibold mb-4 font-[family-name:var(--font-geist-sans)]">
+            {/* <h2 className="text-3xl font-semibold mb-4 font-[family-name:var(--font-geist-sans)]">
               Follow Us
             </h2>
             <p className="mb-4 font-[family-name:var(--font-geist-sans)]">
@@ -116,64 +115,8 @@ const ContactUs = () => {
               <a href="#" className="text-blue-500">
                 LinkedIn
               </a>
-            </div>
+            </div> */}
           </div>
-        </div>
-
-        {/* Right Half - Contact Form */}
-        <div className="border md:w-1/2 p-6 bg-primary-foreground rounded-lg flex flex-col">
-          <h2 className="text-3xl font-semibold mb-6 font-[family-name:var(--font-geist-sans)] text-center">
-            Send Us a Message
-          </h2>
-
-          <form
-            className="flex flex-col flex-grow justify-between my-2 mx-3"
-            onSubmit={handleSubmit}
-          >
-            <Input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleInputChange}
-              className="p-2 border rounded-lg mb-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
-            <Input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleInputChange}
-              className="p-2 border rounded-lg mb-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
-            <Input
-              type="text"
-              name="phone"
-              placeholder="Your Phone"
-              value={formData.phone}
-              onChange={handleInputChange}
-              className="p-2 border rounded-lg mb-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
-            <Textarea
-              name="message"
-              placeholder="Your Message"
-              value={formData.message}
-              onChange={handleInputChange}
-              className="p-2 border rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              rows="4"
-              required
-            />
-            <Button
-              type="submit"
-              className="bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 flex-shrink-0 my-2"
-              disabled={loading}
-            >
-              {loading ? "Sending..." : "Send Message"}
-            </Button>
-          </form>
         </div>
       </div>
     </div>

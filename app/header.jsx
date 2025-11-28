@@ -71,7 +71,6 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    // Disable scrolling when sidebar is open
     if (sidebarOpen) {
       document.body.style.overflow = "hidden";
     } else {
@@ -91,7 +90,7 @@ const Header = () => {
                     <span className="text-white font-bold">R</span>
                   </div>
                   <h1 className="text-md font-semibold font-[family-name:var(--font-geist-sans)]">
-                    RCRS STORE
+                    RCRS
                   </h1>
                 </TooltipTrigger>
                 <TooltipContent>

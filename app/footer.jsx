@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <footer className="text-sm text-neutral-500 dark:text-neutral-400 ">
+    <footer className="bg-secondary text-sm text-neutral-500 dark:text-neutral-400 ">
       <div className="hidden md:flex flex-col gap-6 border-t border-neutral-200 px-4 py-6 pt-8 text-sm  dark:border-neutral-700">
         <div className="flex ml-[14vw]">
           <Link href={"/"} className="flex items-center top-0 space-x-3">
@@ -11,68 +11,76 @@ function Footer() {
               <span className="text-white font-bold">R</span>
             </div>
             <h1 className="text-md font-semibold font-[family-name:var(--font-geist-sans)]">
-              RCRS STORE
+              RCRS
             </h1>
           </Link>
           <nav>
-            <ul className="flex-col justify-start ml-[5vw]">
-              <li>
-                <Link
-                  href="/"
-                  className="block p-2 hover:text-black hover:underline dark:hover:text-neutral-300"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="block p-2 hover:text-black hover:underline dark:hover:text-neutral-300"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/terms-conditions"
-                  className="block p-2 hover:text-black hover:underline dark:hover:text-neutral-300"
-                >
-                  Terms & Conditions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/shipping-return-policy"
-                  className="block p-2 hover:text-black hover:underline dark:hover:text-neutral-300"
-                >
-                  Shipping & Returns
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/privacy-policy"
-                  className="block p-2 hover:text-black hover:underline dark:hover:text-neutral-300"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/faq"
-                  className="block p-2 hover:text-black hover:underline dark:hover:text-neutral-300"
-                >
-                  FAQ
-                </Link>
-              </li>
-            </ul>
+            <div className="grid grid-cols-2 gap-8 ml-[5vw]">
+              {/* Left Column */}
+              <ul className="flex flex-col">
+                <li>
+                  <Link
+                    href="/"
+                    className="block p-2 hover:text-black hover:underline dark:hover:text-neutral-300"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/about"
+                    className="block p-2 hover:text-black hover:underline dark:hover:text-neutral-300"
+                  >
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/terms-conditions"
+                    className="block p-2 hover:text-black hover:underline dark:hover:text-neutral-300"
+                  >
+                    Terms & Conditions
+                  </Link>
+                </li>
+              </ul>
+
+              {/* Right Column */}
+              <ul className="flex flex-col">
+                <li>
+                  <Link
+                    href="/shipping-return-policy"
+                    className="block p-2 hover:text-black hover:underline dark:hover:text-neutral-300"
+                  >
+                    Shipping & Returns
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/privacy-policy"
+                    className="block p-2 hover:text-black hover:underline dark:hover:text-neutral-300"
+                  >
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/faq"
+                    className="block p-2 hover:text-black hover:underline dark:hover:text-neutral-300"
+                  >
+                    FAQ
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </nav>
+
           <span className="flex ml-[28vw]">
             <div className="">
               <h4 className="font-semibold">Customer Support</h4>
               <p>
                 Need help? Call us at{" "}
-                <a href="tel:+1234567890" className="hover:underline">
-                  +1 (234) 567-890
+                <a href="tel:+919044944111" className="hover:underline">
+                  +91-9044944111
                 </a>
               </p>
             </div>
@@ -82,8 +90,7 @@ function Footer() {
         <hr />
         <div className="flex item-center justify-between mt-2">
           <span className="ml-16  ">
-            © 2023-2024 Steel Store, Inc. All rights reserved. | Related to:
-            Steel Products, Manufacturing, Supply Chain
+            © 2023-2024 RCRS, Inc. All rights reserved.
           </span>
           <span>Jayesh Jain</span>
         </div>
@@ -158,8 +165,8 @@ function Footer() {
               <h4 className="font-semibold">Customer Support</h4>
               <p>
                 Need help? Call us at{" "}
-                <a href="tel:+1234567890" className="hover:underline">
-                  +1 (234) 567-890
+                <a href="tel:+919044944111" className="hover:underline">
+                  +91-9044944111
                 </a>
               </p>
             </div>
@@ -169,8 +176,8 @@ function Footer() {
         <hr />
         <div className="flex item-center justify-between mt-2">
           <span className="ml-0 mr-5 md:ml-16">
-            © 2023-2024 Steel Store, Inc. All rights reserved. | Related to:
-            Steel Products, Manufacturing, Supply Chain
+            © 2023-2024 Ram Chander Radhey Shyam Jaiswal, Inc. All rights
+            reserved.
           </span>
           <span>Jayesh Jain</span>
         </div>
