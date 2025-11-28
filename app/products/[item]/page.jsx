@@ -3,6 +3,12 @@
 import items from "@/lib/data";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import Script from "next/script";
+import { generateBreadcrumbList } from "@/lib/structuredData";
+
+// Note: generateMetadata cannot be used in client components
+// The metadata will be inherited from the root layout
+// For dynamic metadata, consider converting to server component or using next/head
 
 const ProductPage = () => {
   const { item } = useParams();

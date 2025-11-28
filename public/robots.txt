@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /api/*
+
+# Host
+Host: https://rcrs.vercel.app
+
+# Sitemaps
+Sitemap: https://rcrs.vercel.app/sitemap.xml

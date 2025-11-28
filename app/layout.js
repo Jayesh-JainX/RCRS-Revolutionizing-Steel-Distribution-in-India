@@ -23,45 +23,91 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "RCRS: Revolutionizing Steel Distribution in India",
+  metadataBase: new URL("https://rcrs.vercel.app"),
+  title: {
+    default: "RCRS: Revolutionizing Steel Distribution in India",
+    template: "%s | RCRS Steel Distribution",
+  },
   description:
     "RCRS is your trusted partner for innovative steel distribution solutions in India, providing quality products, timely delivery, and exceptional service.",
-  keywords:
-    "Steel Distributor, Steel Supply, RCRS, Steel Products, India, Steel Distribution",
-  author: "RCRS Team",
-  robots: "index, follow",
+  keywords: [
+    "Steel Distributor",
+    "Steel Supply",
+    "RCRS",
+    "Steel Products India",
+    "TMT Bars",
+    "MS Angle",
+    "Steel Sheets",
+    "Construction Steel",
+    "Ayodhya Steel Distributor",
+  ],
+  authors: [{ name: "RCRS Team" }],
+  creator: "RCRS",
+  publisher: "RCRS",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://rcrs.vercel.app",
     title: "RCRS: Revolutionizing Steel Distribution in India",
     description:
-      "RCRS provides quality steel distribution services across India.",
-    url: "https://rcrs.vercel.app", // replace with your actual URL
-    image: "/Hindustan-Iron-Store-Slider-1.jpg", // replace with your actual Open Graph image
+      "RCRS provides quality steel distribution services across India. Authorized dealers of SAIL, Jindal, JSW, and Apollo.",
+    siteName: "RCRS Steel Distribution",
+    images: [
+      {
+        url: "/Hindustan-Iron-Store-Slider-1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "RCRS Steel Distribution - Quality Steel Products",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "RCRS: Revolutionizing Steel Distribution in India",
     description:
       "RCRS provides quality steel distribution services across India.",
-    image: "/Hindustan-Iron-Store-Slider-1.jpg",
+    images: ["/Hindustan-Iron-Store-Slider-1.jpg"],
+  },
+  alternates: {
+    canonical: "https://rcrs.vercel.app",
   },
   manifest: "/manifest.json",
+  verification: {
+    google: "tS79y0KazvnvyQ5xkEdJW8RC955XhgLbbLZy783oAuU",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta
-          name="google-site-verification"
-          content="tS79y0KazvnvyQ5xkEdJW8RC955XhgLbbLZy783oAuU"
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData.organization),
+          }}
         />
-        <Script type="application/ld+json">
-          {JSON.stringify(structuredData.organization)}
-        </Script>
         {structuredData.products.map((product, index) => (
-          <Script key={index} type="application/ld+json">
-            {JSON.stringify(product)}
-          </Script>
+          <Script
+            key={`product-schema-${index}`}
+            id={`product-schema-${index}`}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(product),
+            }}
+          />
         ))}
       </head>
       <body
@@ -97,15 +143,6 @@ export default function RootLayout({ children }) {
           <Analytics />
         </ThemeProvider>
       </body>
-      <Script type="application/ld+json">
-        {JSON.stringify(structuredData.organization)}
-      </Script>
-
-      {structuredData.products.map((product, index) => (
-        <Script key={index} type="application/ld+json">
-          {JSON.stringify(product)}
-        </Script>
-      ))}
     </html>
   );
 }

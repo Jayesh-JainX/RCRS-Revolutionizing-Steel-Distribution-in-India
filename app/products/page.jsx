@@ -5,6 +5,9 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import items from "@/lib/data";
 
+// Note: Metadata cannot be exported from client components
+// SEO handled via root layout metadata template
+
 const ProductsPage = () => {
   const router = useRouter();
   const [searchTerm, setSearchTerm] = useState("");

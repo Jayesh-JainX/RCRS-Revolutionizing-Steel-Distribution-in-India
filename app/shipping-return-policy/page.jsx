@@ -1,5 +1,30 @@
 import React from "react";
 
+export const metadata = {
+  title: "Shipping & Return Policy - RCRS Steel Distribution",
+  description:
+    "Learn about RCRS's shipping and return policies for steel products. We ensure timely delivery and hassle-free returns for our customers.",
+  keywords: [
+    "Shipping Policy",
+    "Return Policy",
+    "RCRS Delivery",
+    "Steel Delivery India",
+  ],
+  openGraph: {
+    title: "Shipping & Return Policy - RCRS Steel Distribution",
+    description: "RCRS's shipping and return policy for steel products.",
+    url: "https://rcrs.vercel.app/shipping-return-policy",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://rcrs.vercel.app/shipping-return-policy",
+  },
+  robots: {
+    index: true,
+    follow: false,
+  },
+};
+
 const ShippingReturnPolicyPage = () => {
   return (
     <div className="container mx-auto px-4 md:px-28 p-6 rounded-lg shadow-md">

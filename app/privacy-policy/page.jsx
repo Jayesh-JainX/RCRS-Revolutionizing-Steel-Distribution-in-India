@@ -1,5 +1,30 @@
 import React from "react";
 
+export const metadata = {
+  title: "Privacy Policy - RCRS Steel Distribution",
+  description:
+    "Read RCRS's privacy policy to understand how we collect, use, and protect your personal information when you use our services.",
+  keywords: [
+    "Privacy Policy",
+    "Data Protection",
+    "RCRS Privacy",
+    "User Privacy",
+  ],
+  openGraph: {
+    title: "Privacy Policy - RCRS Steel Distribution",
+    description: "RCRS's privacy policy and data protection practices.",
+    url: "https://rcrs.vercel.app/privacy-policy",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://rcrs.vercel.app/privacy-policy",
+  },
+  robots: {
+    index: true,
+    follow: false,
+  },
+};
+
 const PrivacyPolicyPage = () => {
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-28 p-6 rounded-lg shadow-md text-left">

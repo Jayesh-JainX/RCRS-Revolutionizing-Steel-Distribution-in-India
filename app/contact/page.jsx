@@ -6,6 +6,9 @@ import { Textarea } from "@/components/ui/textarea";
 import React from "react";
 import { useToast } from "@/hooks/use-toast";
 
+// Note: Metadata cannot be exported from client components
+// SEO handled via root layout metadata template
+
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: "",

@@ -1,5 +1,30 @@
 import React from "react";
 
+export const metadata = {
+  title: "Terms and Conditions - RCRS Steel Distribution",
+  description:
+    "Read RCRS's terms and conditions governing the use of our website and services. By accessing our website, you agree to these terms.",
+  keywords: [
+    "Terms and Conditions",
+    "Terms of Service",
+    "RCRS Terms",
+    "User Agreement",
+  ],
+  openGraph: {
+    title: "Terms and Conditions - RCRS Steel Distribution",
+    description: "RCRS's terms and conditions for using our services.",
+    url: "https://rcrs.vercel.app/terms-conditions",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://rcrs.vercel.app/terms-conditions",
+  },
+  robots: {
+    index: true,
+    follow: false,
+  },
+};
+
 const TermsAndConditionsPage = () => {
   return (
     <div className="container mx-auto px-4 md:px-28 p-6 rounded-lg shadow-md">

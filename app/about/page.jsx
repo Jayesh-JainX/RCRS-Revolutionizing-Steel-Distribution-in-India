@@ -1,5 +1,36 @@
 import React from "react";
 
+export const metadata = {
+  title: "About Us - RCRS Steel Distribution",
+  description:
+    "Learn about RCRS - A trusted family-run iron & steel enterprise since 1960 in Ayodhya, Uttar Pradesh. Authorized dealers of SAIL, Jindal, JSW, and Apollo.",
+  keywords: [
+    "About RCRS",
+    "Steel Distributor Ayodhya",
+    "Steel Company History",
+    "RCRS Team",
+    "Steel Distribution India",
+  ],
+  openGraph: {
+    title: "About Us - RCRS Steel Distribution",
+    description:
+      "Learn about RCRS - A trusted family-run iron & steel enterprise since 1960 in Ayodhya, Uttar Pradesh.",
+    url: "https://rcrs.vercel.app/about",
+    type: "website",
+    images: [
+      {
+        url: "/store.png",
+        width: 1200,
+        height: 630,
+        alt: "RCRS Iron Store - Ayodhya",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://rcrs.vercel.app/about",
+  },
+};
+
 const AboutUs = () => {
   return (
     <div className="container mx-auto p-6 rounded-lg shadow-md">
