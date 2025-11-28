@@ -78,9 +78,12 @@ function Footer() {
             <div className="">
               <h4 className="font-semibold">Customer Support</h4>
               <p>
-                Need help? Call us at{" "}
-                <a href="tel:+919044944111" className="hover:underline">
-                  +91-9044944111
+                Need help? Mail us at{" "}
+                <a
+                  href="mailto:rcrsjaiswal@gmail.com"
+                  className="hover:underline"
+                >
+                  rcrsjaiswal@gmail.com
                 </a>
               </p>
             </div>
@@ -164,10 +167,8 @@ function Footer() {
             <div>
               <h4 className="font-semibold">Customer Support</h4>
               <p>
-                Need help? Call us at{" "}
-                <a href="tel:+919044944111" className="hover:underline">
-                  +91-9044944111
-                </a>
+                Need help? Mail us at{" "}
+                <a href="mailto:rcrsjaiswal@gmail.com">rcrsjaiswal@gmail.com</a>
               </p>
             </div>
           </div>

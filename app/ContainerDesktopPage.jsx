@@ -1,6 +1,5 @@
 "use client";
 import company_names from "@/lib/company";
-import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 
 function ContainerDesktop() {
