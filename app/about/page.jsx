@@ -96,7 +96,7 @@ const AboutUs = () => {
         </p>
       </section>
 
-      <section className="mb-8 bg-primary-foreground p-4 rounded-lg">
+      <section className="mb-8 bg-primary-foreground border-2 p-4 rounded-lg">
         <h2 className="text-3xl font-semibold mb-4">
           Your journey, Our constant support
         </h2>
@@ -107,29 +107,12 @@ const AboutUs = () => {
           distribution network in India. Together, we can build a stronger, more
           reliable future.
         </p>
-        <p className="mb-4">
+        <p>
           Your collaboration is essential in achieving our goals. We welcome
           partnerships that share our vision of innovation and sustainability.
           Let’s work together to set new standards in the steel distribution
           industry and make a lasting impact on the economy and the environment.
           With your support, we can elevate our industry to new heights.
-        </p>
-      </section>
-
-      <section className="mb-8">
-        <h2 className="text-3xl font-semibold mb-4">Contact Us</h2>
-        <p className="mb-4">
-          If you’re interested in learning more about our services or exploring
-          partnership opportunities, please don’t hesitate to reach out. Our
-          dedicated team is here to assist you and answer any questions you may
-          have. Together, we can forge a path towards a more efficient and
-          sustainable future in steel distribution.
-        </p>
-        <p>
-          <strong>Email:</strong>{" "}
-          <a href="mailto:rcrsjaiswal@gmail.com">rcrsjaiswal@gmail.com</a> |{" "}
-          <strong>Phone:</strong>{" "}
-          <a href="tel:+91-9044944111">+91-9044944111</a>
         </p>
       </section>
     </div>
