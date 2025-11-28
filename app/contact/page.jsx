@@ -91,7 +91,8 @@ const ContactUs = () => {
               </a>
             </p>
             <p className="mb-4 font-[family-name:var(--font-geist-sans)]">
-              <strong>Phone:</strong> +91-9044944111
+              <strong>Phone:</strong>{" "}
+              <a href="tel:+91-9044944111">+91-9044944111</a>
             </p>
             <p className="mb-2 font-[family-name:var(--font-geist-sans)]">
               <strong>Address:</strong> Near Devkali bypass, Ayodhya, Uttar

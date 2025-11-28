@@ -33,15 +33,23 @@ const ProductPage = () => {
             <div className="flex flex-col justify-start">
               <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
               <p className="text-lg font-semibold mb-2">
-                Price: <span className="text-blue-500">{product.price}</span>
+                <span className="text-blue-500">{product.price}</span>
               </p>
               <p className="mt-4">{product.description}</p>
               <p className="mt-4 text-md text-gray-700">
                 For inquiries, please{" "}
-                <Link href="/contact" className="text-blue-500 hover:underline">
+                <a
+                  href="tel:+91-9044944111"
+                  className="sm:hidden text-blue-500 hover:underline"
+                >
                   Contact Us
-                </Link>
-                .
+                </a>
+                <a
+                  href="mailto:rcrsjaiswal@gmail.com"
+                  className="hidden sm:inline text-blue-500 hover:underline"
+                >
+                  Contact Us
+                </a>
               </p>
             </div>
           </div>
