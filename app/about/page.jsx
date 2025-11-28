@@ -38,7 +38,7 @@ const AboutUs = () => {
 
         <div className="w-full md:w-1/2 p-4">
           <img
-            src="/Hindustan-Iron-Store-Slider-1.jpg"
+            src="/store.png"
             alt="Steel Distribution"
             className="w-full h-full object-cover rounded-lg shadow-lg"
           />
@@ -126,8 +126,10 @@ const AboutUs = () => {
           sustainable future in steel distribution.
         </p>
         <p>
-          <strong>Email:</strong> info@rcrs.com | <strong>Phone:</strong>{" "}
-          +91-XXXXXXXXXX
+          <strong>Email:</strong>{" "}
+          <a href="mailto:rcrsjaiswal@gmail.com">rcrsjaiswal@gmail.com</a> |{" "}
+          <strong>Phone:</strong>{" "}
+          <a href="tel:+91-9044944111">+91-9044944111</a>
         </p>
       </section>
     </div>

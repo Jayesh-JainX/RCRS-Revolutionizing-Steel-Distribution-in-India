@@ -3,6 +3,7 @@ import Main from "./Main";
 
 const LazyHero = lazy(() => import("./Hero"));
 const LazyAbout = lazy(() => import("./About"));
+const LazyContainer = lazy(() => import("./ContainerPage"));
 const LazyMap = lazy(() => import("./Map"));
 
 const Loading = () => (
@@ -23,6 +24,10 @@ export default function Home() {
       <hr className="mx-4" />
       <Suspense fallback={<Loading />}>
         <LazyHero />
+      </Suspense>
+      <hr className="mx-4" />
+      <Suspense fallback={<Loading />}>
+        <LazyContainer />
       </Suspense>
       <hr className="mx-4" />
       <Suspense fallback={<Loading />}>

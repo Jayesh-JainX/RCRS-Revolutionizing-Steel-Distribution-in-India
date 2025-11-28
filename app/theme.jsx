@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button";
 export function ModeToggle() {
   const { theme, resolvedTheme, setTheme } = useTheme();
 
-  // Use resolvedTheme first so "system" resolves to actual light/dark
   const currentTheme = resolvedTheme || theme;
   const isDark = currentTheme === "dark";
 

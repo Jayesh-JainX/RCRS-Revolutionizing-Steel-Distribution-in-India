@@ -59,8 +59,11 @@ function Hero() {
             className="relative overflow-hidden product bg-primary-foreground p-4 md:p-6 rounded-lg border hover:border-blue-500 shadow text-center w-full flex flex-col group"
           >
             <div
-              className="absolute inset-0 bg-cover bg-center blur-0 transition-opacity duration-200 ease-in-out opacity-0 group-hover:opacity-60" // Added transition properties
-              style={{ backgroundImage: `url(${product.img})` }}
+              className="absolute inset-0 bg-cover bg-center blur-sm transition-opacity duration-200 ease-in-out opacity-0 group-hover:opacity-60" // Added transition properties
+              style={{
+                backgroundImage: `url(${product.img})`,
+                filter: "blur(5px)",
+              }}
             />
             <div className="relative z-10">
               {renderIcon(product.icon)}
@@ -75,16 +78,6 @@ function Hero() {
         ))}
       </div>
 
-      <div className="additional-info mt-8 text-center">
-        <p className="text-sm md:text-base">
-          At Ram Chander Radhey Shyam Jaiswal (RCRS), we are committed to
-          delivering exceptional products that meet the highest industry
-          standards. Our extensive experience and dedication to quality ensure
-          that our clients receive the best materials for their construction
-          needs. Trust us to provide you with reliable, durable, and
-          high-performance products that stand the test of time.
-        </p>
-      </div>
       <div className="flex justify-center mt-6">
         <Link href={"/products"}>
           {" "}

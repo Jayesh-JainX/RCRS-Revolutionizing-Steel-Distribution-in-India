@@ -5,23 +5,19 @@ import React, { useEffect, useState } from "react";
 
 function Main() {
   const images = [
-    "Hindustan-Iron-Store-Slider-1.jpg",
-    "Hindustan-Iron-Store-Slider-2.jpg",
+    "main/Slider-1.png",
+    "main/Slider-2.png",
+    "main/Slider-3.png",
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [nextImageIndex, setNextImageIndex] = useState(1);
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    setNextImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
   const prevImage = () => {
     setCurrentImageIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
-    );
-    setNextImageIndex(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
   };

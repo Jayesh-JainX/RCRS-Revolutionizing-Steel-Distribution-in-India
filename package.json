@@ -1,12 +1,10 @@
 {
-  "name": "rcrs-revolutionizing-steel-distribution-in-india",
-  "version": "0.1.0",
+  "name": "rcrs",
+  "version": "0.2.0",
   "private": true,
   "author": "Jayesh Jain",
   "scripts": {
-    "dev": "concurrently \"npm run dev:next\" \"npm run dev:node\"",
-    "dev:next": "next dev",
-    "dev:node": "node index.js",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

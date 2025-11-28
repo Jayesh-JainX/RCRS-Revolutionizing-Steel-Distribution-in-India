@@ -46,7 +46,7 @@ export default function AboutUs() {
           <div className="absolute top-0 left-0 bg-blue-400 w-16 h-16 rounded-full opacity-50"></div>
           <div className="absolute bottom-0 right-0 bg-blue-200 w-24 h-24 rounded-full opacity-50"></div>
           <img
-            src="/Hindustan-Iron-Store-Slider-1.jpg"
+            src="/store.png"
             alt="Steel Distribution"
             className="w-full md:h-[50vh] object-cover rounded-md shadow-lg"
           />
