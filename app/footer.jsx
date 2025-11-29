@@ -56,10 +56,10 @@ function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/shipping-return-policy"
+                    href="/shipping-policy"
                     className="block p-2 hover:text-black hover:underline dark:hover:text-neutral-300"
                   >
-                    Shipping & Returns
+                    Shipping
                   </Link>
                 </li>
                 <li>
@@ -139,10 +139,10 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  href="/shipping-return-policy"
+                  href="/shipping-policy"
                   className="block p-2 hover:text-black hover:underline dark:hover:text-neutral-300"
                 >
-                  Shipping & Returns
+                  Shipping
                 </Link>
               </li>
               <li>

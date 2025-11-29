@@ -1,18 +1,21 @@
 import React from "react";
 
 export const metadata = {
-  title: "Terms and Conditions - RCRS Steel Distribution",
+  title: "Terms & Conditions",
   description:
-    "Read RCRS's terms and conditions governing the use of our website and services. By accessing our website, you agree to these terms.",
+    "Read Hindustan Iron Store's terms & conditions, shipping and refund policy for purchases of iron, steel, and construction materials.",
   keywords: [
     "Terms and Conditions",
     "Terms of Service",
-    "RCRS Terms",
+    "Hindustan Iron Store Terms",
     "User Agreement",
+    "Shipping Policy",
+    "Refund Policy",
   ],
   openGraph: {
-    title: "Terms and Conditions - RCRS Steel Distribution",
-    description: "RCRS's terms and conditions for using our services.",
+    title: "Terms & Conditions",
+    description:
+      "Hindustan Iron Store's terms & conditions, shipping, and refund policies for using our services.",
     url: "https://rcrs.vercel.app/terms-conditions",
     type: "website",
   },
@@ -29,110 +32,82 @@ const TermsAndConditionsPage = () => {
   return (
     <div className="container mx-auto px-4 md:px-28 p-6 rounded-lg shadow-md">
       <h1 className="text-4xl font-bold text-center mb-8">
-        Terms and Conditions
+        TERMS &amp; CONDITIONS
       </h1>
 
+      <h2 className="text-3xl font-semibold mb-4">1. General</h2>
       <p className="mb-4">
-        Welcome to RCRS! These terms and conditions outline the rules and
-        regulations for the use of our website and services. By accessing this
-        website, you agree to these terms fully. If you do not agree with any
-        part of these terms, please refrain from using our website.
+        These Terms &amp; Conditions (“Terms”) govern all purchases made from
+        Hindustan Iron Store, including retail and bulk orders of iron, steel,
+        and construction materials. By placing an order, you agree to these
+        Terms.
       </p>
 
-      <h2 className="text-3xl font-semibold mb-4">1. Introduction</h2>
+      <h2 className="text-3xl font-semibold mb-4">2. Products &amp; Pricing</h2>
+      <p className="mb-2">
+        All product specifications (sizes, weights, grades) are provided based
+        on manufacturer data.
+      </p>
+      <p className="mb-2">
+        Prices are subject to market fluctuations and may change without prior
+        notice until payment is received.
+      </p>
       <p className="mb-4">
-        These Terms govern your use of our website and services. By using our
-        website, you accept these Terms in full. If you disagree with any part
-        of these Terms, you must not use our website or services. We may update
-        these Terms periodically, and it is your responsibility to review them
-        regularly.
+        Any special cutting, customization, or fabrication request will incur
+        additional charges.
       </p>
 
-      <h2 className="text-3xl font-semibold mb-4">2. User Responsibilities</h2>
+      <h2 className="text-3xl font-semibold mb-4">3. Order Confirmation</h2>
+      <p className="mb-2">
+        Orders are confirmed only after advance payment is received.
+      </p>
       <p className="mb-4">
-        By using our services, you agree to provide accurate, current, and
-        complete information about yourself. You are responsible for maintaining
-        the confidentiality of your account information and password. You agree
-        to notify us immediately of any unauthorized use of your account or any
-        other breach of security. You are also responsible for all activities
-        that occur under your account.
+        Once confirmed, orders cannot be cancelled unless mutually agreed.
       </p>
 
-      <h2 className="text-3xl font-semibold mb-4">3. Intellectual Property</h2>
+      <h2 className="text-3xl font-semibold mb-4">4. Payment Terms</h2>
+      <p className="mb-2">We operate strictly on advance payment basis.</p>
+      <p className="mb-2">
+        Accepted payment methods: Bank Transfer, UPI, Cheque (subject to
+        clearance).
+      </p>
+      <p className="mb-4">GST invoices are provided for all orders.</p>
+
+      <h2 className="text-3xl font-semibold mb-4">5. Delivery &amp; Pickup</h2>
+      <p className="mb-2">
+        Delivery timelines depend on availability, logistics, and dispatch
+        schedules.
+      </p>
+      <p className="mb-2">Customers must inspect goods upon delivery/pickup.</p>
+      <p className="mb-4">Any discrepancy must be reported within 24 hours.</p>
+
+      <h2 className="text-3xl font-semibold mb-4">
+        6. Weight &amp; Quantity Tolerance
+      </h2>
+      <p className="mb-2">
+        Standard industry tolerance applies to TMT bars, plates, and sections.
+      </p>
       <p className="mb-4">
-        All content on this website, including text, graphics, logos, and
-        images, is the property of RCRS or our content suppliers and is
-        protected by international copyright, trademark, and other intellectual
-        property laws. You may not reproduce, distribute, or create derivative
-        works from any content without our prior written consent. Unauthorized
-        use may result in legal action.
+        Final billing is based on actual weight measured at the
+        warehouse/weighbridge.
       </p>
 
       <h2 className="text-3xl font-semibold mb-4">
-        4. Limitation of Liability
+        7. Warranty &amp; Liability
       </h2>
+      <p className="mb-2">
+        We do not manufacture the products; warranties are as per the respective
+        brand/manufacturer.
+      </p>
       <p className="mb-4">
-        In no event shall RCRS, nor any of its directors, employees, partners,
-        agents, suppliers, or affiliates, be liable for any indirect,
-        incidental, special, consequential, or punitive damages, including,
-        without limitation, loss of profits, data, use, goodwill, or other
-        intangible losses, arising from (i) your access to or use of (or
-        inability to access or use) the service; (ii) any conduct or content of
-        any third party on the service; (iii) any content obtained from the
-        service; and (iv) unauthorized access, use, or alteration of your
-        transmissions or content.
+        We are not liable for damages caused by improper handling, storage, or
+        third-party transport.
       </p>
 
-      <h2 className="text-3xl font-semibold mb-4">5. Changes to Terms</h2>
+      <h2 className="text-3xl font-semibold mb-4">8. Governing Law</h2>
       <p className="mb-4">
-        We may revise these Terms from time to time. We will notify you of any
-        changes by posting the new Terms on this page. It is your responsibility
-        to review these Terms periodically for any changes. Changes to these
-        Terms are effective when they are posted on this page. Your continued
-        use of our website after changes have been made constitutes your
-        acceptance of the new Terms.
-      </p>
-
-      <h2 className="text-3xl font-semibold mb-4">6. Governing Law</h2>
-      <p className="mb-4">
-        These Terms shall be governed by and construed in accordance with the
-        laws of India, without regard to its conflict of law principles. Any
-        legal action or proceeding arising out of or related to these Terms
-        shall be brought exclusively in the courts located in India. By using
-        our services, you consent to the jurisdiction of these courts.
-      </p>
-
-      <h2 className="text-3xl font-semibold mb-4">7. Contact Us</h2>
-      <p className="mb-4">
-        If you have any questions about these Terms, please contact us:
-      </p>
-      <p className="mb-4">
-        <strong>Email:</strong> info@rcrs.com | <strong>Phone:</strong>{" "}
-        +91-XXXXXXXXXX
-      </p>
-
-      <h2 className="text-3xl font-semibold mb-4">8. User Agreement</h2>
-      <p className="mb-4">
-        By using our services, you agree to comply with all applicable laws and
-        regulations. You further agree not to engage in any conduct that could
-        damage, disable, overburden, or impair our services or interfere with
-        any other party's use of our services. Any violation of these Terms may
-        result in termination of your access to the services without prior
-        notice.
-      </p>
-      <p className="mb-4">
-        We reserve the right to modify or terminate our services for any reason,
-        without notice, at any time. We also reserve the right to refuse service
-        to anyone for any reason at any time.
-      </p>
-
-      <h2 className="text-3xl font-semibold mb-4">9. Feedback and Reviews</h2>
-      <p className="mb-4">
-        We welcome your feedback and suggestions regarding our services. By
-        submitting feedback, you grant us the right to use, modify, and
-        distribute your feedback without any obligation to you. Please note that
-        any reviews or feedback you provide may be publicly displayed on our
-        website or marketing materials.
+        These terms are governed by the laws of India. Any disputes shall be
+        resolved in the jurisdiction of Ayodhya, Uttar Pradesh.
       </p>
     </div>
   );
