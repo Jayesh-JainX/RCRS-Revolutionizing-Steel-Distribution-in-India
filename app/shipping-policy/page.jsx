@@ -1,24 +1,26 @@
 import React from "react";
 
 export const metadata = {
-  title: "Shipping Policy - RCRS Steel Distribution",
+  title: "Shipping Policy - Ramchandra Radheshyam jaiswal Iron Steel - Ayodhya",
   description:
-    "Learn about RCRS's shipping policy for steel products, including delivery coverage, charges, advance payment requirements, and material inspection guidelines.",
+    "Learn about Ramchandra Radheshyam jaiswal Iron Steel's shipping policy for steel products, including delivery coverage, charges, advance payment requirements, and material inspection guidelines.",
   keywords: [
     "Shipping Policy",
     "RCRS Delivery",
+    "Steel Delivery Ayodhya",
     "Steel Delivery India",
     "Logistics Policy",
+    "Iron Steel Shipping",
   ],
   openGraph: {
-    title: "Shipping Policy - RCRS Steel Distribution",
+    title: "Shipping Policy - Ramchandra Radheshyam jaiswal Iron Steel",
     description:
-      "RCRS's shipping policy for steel products, covering delivery terms, advance payment, and inspection.",
-    url: "https://rcrs.vercel.app/shipping-return-policy",
+      "Ramchandra Radheshyam jaiswal Iron Steel's shipping policy for steel products, covering delivery terms, advance payment, and inspection.",
+    url: "https://rcrsjaiswal.in/shipping-return-policy",
     type: "website",
   },
   alternates: {
-    canonical: "https://rcrs.vercel.app/shipping-return-policy",
+    canonical: "https://rcrsjaiswal.in/shipping-return-policy",
   },
   robots: {
     index: true,

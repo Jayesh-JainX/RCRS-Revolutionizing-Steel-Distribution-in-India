@@ -1,24 +1,26 @@
 import React from "react";
 
 export const metadata = {
-  title: "Privacy Policy",
+  title: "Privacy Policy - Ramchandra Radheshyam jaiswal Iron Steel",
   description:
-    "Read Hindustan Iron Store's privacy policy to understand how we collect, use, and protect your personal information when you use our services.",
+    "Read Ramchandra Radheshyam jaiswal Iron Steel's privacy policy to understand how we collect, use, and protect your personal information when you use our services.",
   keywords: [
     "Privacy Policy",
     "Data Protection",
-    "Hindustan Iron Store Privacy",
+    "Ramchandra Radheshyam jaiswal Iron Steel Privacy",
+    "RCRS Privacy Policy",
     "User Privacy",
+    "Steel Distributor Privacy Policy",
   ],
   openGraph: {
-    title: "Privacy Policy",
+    title: "Privacy Policy - Ramchandra Radheshyam jaiswal Iron Steel",
     description:
-      "Hindustan Iron Store's privacy policy and data protection practices.",
-    url: "https://rcrs.vercel.app/privacy-policy",
+      "Ramchandra Radheshyam jaiswal Iron Steel's privacy policy and data protection practices.",
+    url: "https://rcrsjaiswal.in/privacy-policy",
     type: "website",
   },
   alternates: {
-    canonical: "https://rcrs.vercel.app/privacy-policy",
+    canonical: "https://rcrsjaiswal.in/privacy-policy",
   },
   robots: {
     index: true,

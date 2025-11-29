@@ -7,7 +7,7 @@ User-agent: *
 Disallow: /api/*
 
 # Host
-Host: https://rcrs.vercel.app
+Host: https://rcrsjaiswal.in
 
 # Sitemaps
-Sitemap: https://rcrs.vercel.app/sitemap.xml
+Sitemap: https://rcrsjaiswal.in/sitemap.xml

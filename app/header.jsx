@@ -87,10 +87,12 @@ const Header = () => {
           <Link href="/">
             <TooltipProvider>
               <Tooltip>
-                <TooltipTrigger className="flex items-center space-x-3">
-                  <div className="h-8 w-8 bg-blue-500 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold">R</span>
-                  </div>
+                <TooltipTrigger className="flex items-center space-x-1">
+                  <img
+                    src="/header-icon.png"
+                    alt="RCRS Logo"
+                    className="h-8 w-8 rounded-lg"
+                  />
                   <h1 className="text-md font-semibold font-[family-name:var(--font-geist-sans)]">
                     RCRS
                   </h1>

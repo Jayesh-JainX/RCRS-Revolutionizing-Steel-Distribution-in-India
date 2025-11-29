@@ -1,26 +1,28 @@
 import React from "react";
 
 export const metadata = {
-  title: "Terms & Conditions",
+  title: "Terms & Conditions - Ramchandra Radheshyam jaiswal Iron Steel",
   description:
-    "Read Hindustan Iron Store's terms & conditions, shipping and refund policy for purchases of iron, steel, and construction materials.",
+    "Read Ramchandra Radheshyam jaiswal Iron Steel's terms & conditions, shipping and refund policy for purchases of iron, steel, and construction materials.",
   keywords: [
     "Terms and Conditions",
     "Terms of Service",
-    "Hindustan Iron Store Terms",
+    "Ramchandra Radheshyam jaiswal Iron Steel Terms",
+    "RCRS Terms",
     "User Agreement",
     "Shipping Policy",
     "Refund Policy",
+    "Steel Purchase Terms",
   ],
   openGraph: {
-    title: "Terms & Conditions",
+    title: "Terms & Conditions - Ramchandra Radheshyam jaiswal Iron Steel",
     description:
-      "Hindustan Iron Store's terms & conditions, shipping, and refund policies for using our services.",
-    url: "https://rcrs.vercel.app/terms-conditions",
+      "Ramchandra Radheshyam jaiswal Iron Steel's terms & conditions, shipping, and refund policies for using our services.",
+    url: "https://rcrsjaiswal.in/terms-conditions",
     type: "website",
   },
   alternates: {
-    canonical: "https://rcrs.vercel.app/terms-conditions",
+    canonical: "https://rcrsjaiswal.in/terms-conditions",
   },
   robots: {
     index: true,
@@ -37,7 +39,7 @@ const TermsAndConditionsPage = () => {
 
       <h2 className="text-3xl font-semibold mb-4">1. General</h2>
       <p className="mb-4">
-        These Terms &amp; Conditions (“Terms”) govern all purchases made from
+        These Terms &amp; Conditions ("Terms") govern all purchases made from
         Hindustan Iron Store, including retail and bulk orders of iron, steel,
         and construction materials. By placing an order, you agree to these
         Terms.

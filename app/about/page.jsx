@@ -1,33 +1,40 @@
 import React from "react";
 
 export const metadata = {
-  title: "About Us - RCRS Steel Distribution",
+  title: "About Us - Ramchandra Radheshyam jaiswal Iron Steel - Ayodhya",
   description:
-    "Learn about RCRS - A trusted family-run iron & steel enterprise since 1960 in Ayodhya, Uttar Pradesh. Authorized dealers of SAIL, Jindal, JSW, and Apollo.",
+    "Learn about Ramchandra Radheshyam jaiswal Iron Steel - A trusted family-run iron & steel enterprise since 1980 in Ayodhya, Uttar Pradesh. Authorized dealers of SAIL, Jindal, JSW, and Apollo. Premium quality TMT bars, MS angles, steel sheets & construction materials.",
   keywords: [
-    "About RCRS",
-    "Steel Distributor Ayodhya",
-    "Steel Company History",
-    "RCRS Team",
-    "Steel Distribution India",
+    "About Ramchandra Radheshyam jaiswal Iron Steel",
+    "RCRS Steel Ayodhya",
+    "Steel Distributor Ayodhya History",
+    "Steel Company Ayodhya",
+    "Family Steel Business Ayodhya",
+    "Iron Steel Dealer Ayodhya",
+    "SAIL Authorized Dealer Ayodhya",
+    "Jindal Steel Ayodhya",
+    "JSW Steel Ayodhya",
+    "Apollo Steel Ayodhya",
+    "Steel Distribution Uttar Pradesh",
+    "Construction Material Supplier Ayodhya",
   ],
   openGraph: {
-    title: "About Us - RCRS Steel Distribution",
+    title: "About Us - Ramchandra Radheshyam jaiswal Iron Steel - Ayodhya",
     description:
-      "Learn about RCRS - A trusted family-run iron & steel enterprise since 1960 in Ayodhya, Uttar Pradesh.",
-    url: "https://rcrs.vercel.app/about",
+      "Learn about Ramchandra Radheshyam jaiswal Iron Steel - A trusted family-run iron & steel enterprise since 1980 in Ayodhya, Uttar Pradesh.",
+    url: "https://rcrsjaiswal.in/about",
     type: "website",
     images: [
       {
         url: "/store.png",
         width: 1200,
         height: 630,
-        alt: "RCRS Iron Store - Ayodhya",
+        alt: "Ramchandra Radheshyam jaiswal Iron Steel - Ayodhya",
       },
     ],
   },
   alternates: {
-    canonical: "https://rcrs.vercel.app/about",
+    canonical: "https://rcrsjaiswal.in/about",
   },
 };
 
@@ -52,10 +59,10 @@ const AboutUs = () => {
           </h2>
           <span className="bg-blue-500 p-1 rounded-lg shadow-lg mx-2"></span>
           <span className="font-bold">
-            Your Trusted Iron & Steel Partner Since 1960
+            Your Trusted Iron & Steel Partner Since 1980
           </span>
           <p className="mt-4 font-sans">
-            Founded in 1960 in Ayodhya, Uttar Pradesh, our family-run iron &
+            Founded in 1980 in Ayodhya, Uttar Pradesh, our family-run iron &
             steel enterprise has been a trusted supplier of high-quality TMT
             bars, angles, channels, flats, plates, and structural materials for
             over six decades. As authorised dealers of leading brands such as

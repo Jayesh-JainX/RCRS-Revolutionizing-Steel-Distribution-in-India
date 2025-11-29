@@ -27,10 +27,10 @@ export default function AboutUs() {
           </h2>
           <span className="bg-blue-500 p-1 rounded-lg shadow-lg mx-2"></span>
           <span className="font-bold text-lg ">
-            Your Trusted Iron & Steel Partner Since 1960
+            Your Trusted Iron & Steel Partner Since 1980
           </span>
           <p className="mt-4 font-sans text-sm md:text-md ">
-            Founded in 1960 in Ayodhya, Uttar Pradesh, our family-run iron &
+            Founded in 1980 in Ayodhya, Uttar Pradesh, our family-run iron &
             steel enterprise has been a trusted supplier of high-quality TMT
             bars, angles, channels, flats, plates, and structural materials for
             over six decades. As authorised dealers of leading brands such as

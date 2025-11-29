@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://rcrs.vercel.app',
+  siteUrl: process.env.SITE_URL || 'https://rcrsjaiswal.in',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   
@@ -17,7 +17,7 @@ module.exports = {
       },
     ],
     additionalSitemaps: [
-      'https://rcrs.vercel.app/sitemap.xml',
+      'https://rcrsjaiswal.in/sitemap.xml',
     ],
   },
 

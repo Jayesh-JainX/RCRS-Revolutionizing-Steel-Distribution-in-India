@@ -2,26 +2,34 @@ import React, { Suspense, lazy } from "react";
 import Main from "./Main";
 
 export const metadata = {
-  title: "Home - RCRS Steel Distribution",
+  title: "Home - Ramchandra Radheshyam jaiswal Iron Steel - Ayodhya",
   description:
-    "Welcome to RCRS - Your trusted partner for innovative steel distribution solutions in India. Authorized dealers of SAIL, Jindal, JSW, and Apollo since 1960.",
+    "Welcome to Ramchandra Radheshyam jaiswal Iron Steel - Your trusted partner for premium steel distribution in Ayodhya, Uttar Pradesh. Authorized dealers of SAIL, Jindal, JSW, and Apollo since 1980. Quality TMT bars, MS angles, steel sheets & construction materials.",
   keywords: [
-    "Steel Distributor India",
-    "RCRS Steel",
-    "TMT Bars",
-    "MS Angle",
-    "Steel Sheets",
+    "Steel Distributor Ayodhya",
+    "Ramchandra Radheshyam jaiswal Iron Steel",
+    "RCRS Steel Ayodhya",
+    "TMT Bars Ayodhya",
+    "MS Angle Ayodhya",
+    "Steel Sheets Ayodhya",
     "Construction Steel Ayodhya",
+    "Iron Steel Supplier Ayodhya",
+    "SAIL Dealer Ayodhya",
+    "Jindal Steel Ayodhya",
+    "JSW Steel Ayodhya",
+    "Apollo Steel Ayodhya",
+    "Building Material Ayodhya",
+    "Steel Products Uttar Pradesh",
   ],
   openGraph: {
-    title: "Home - RCRS Steel Distribution",
+    title: "Home - Ramchandra Radheshyam jaiswal Iron Steel - Ayodhya",
     description:
-      "Welcome to RCRS - Your trusted partner for innovative steel distribution solutions in India.",
-    url: "https://rcrs.vercel.app",
+      "Welcome to Ramchandra Radheshyam jaiswal Iron Steel - Your trusted partner for premium steel distribution in Ayodhya since 1980.",
+    url: "https://rcrsjaiswal.in",
     type: "website",
   },
   alternates: {
-    canonical: "https://rcrs.vercel.app",
+    canonical: "https://rcrsjaiswal.in",
   },
 };
 
