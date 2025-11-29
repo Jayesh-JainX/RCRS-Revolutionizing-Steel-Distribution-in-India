@@ -48,7 +48,7 @@ function ContainerMobile() {
               <div key={index}>
                 <div className="group relative border rounded-md bg-primary-foreground w-[70vw] h-[25vh] flex items-center justify-center overflow-hidden hover:border-blue-600 transition-all duration-300">
                   <img
-                    src={`.${item.imgSrc}`}
+                    src={item.imgSrc}
                     className="w-full object-fill transition duration-300 ease-in-out group-hover:scale-105"
                     alt={item.name}
                   />
