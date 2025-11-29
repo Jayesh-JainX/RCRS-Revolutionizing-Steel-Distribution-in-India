@@ -50,7 +50,7 @@ const Header = () => {
   const handleRecommendationClick = () => {
     toggleSidebar();
     setShowRecommendations(false);
-    // Ensure body overflow is reset before navigation
+
     document.body.style.overflow = "";
   };
 
@@ -58,11 +58,11 @@ const Header = () => {
     const handleClickOutside = (event) => {
       if (
         recommendationsRef.current &&
-        !recommendationsRef.current.contains(event.target) && // Check if click is outside recommendations
-        document.querySelector('input[type="text"]') && // Ensure input exists
-        !document.querySelector('input[type="text"]').contains(event.target) // Check if click is outside the input
+        !recommendationsRef.current.contains(event.target) &&
+        document.querySelector('input[type="text"]') &&
+        !document.querySelector('input[type="text"]').contains(event.target)
       ) {
-        setShowRecommendations(false); // Hide recommendations
+        setShowRecommendations(false);
       }
     };
 

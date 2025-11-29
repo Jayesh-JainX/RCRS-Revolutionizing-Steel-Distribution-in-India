@@ -95,7 +95,9 @@ function Footer() {
           <span className="ml-16  ">
             © 2023-2024 RCRS, Inc. All rights reserved.
           </span>
-          <span>Jayesh Jain</span>
+          <a href="https://jayeshjain.vercel.app" target="_blank">
+            <span>JJ</span>
+          </a>
         </div>
       </div>
 
@@ -180,7 +182,9 @@ function Footer() {
             © 2023-2024 Ram Chander Radhey Shyam Jaiswal, Inc. All rights
             reserved.
           </span>
-          <span>Jayesh Jain</span>
+          <a href="https://jayeshjain.vercel.app" target="_blank">
+            <span>JJ</span>
+          </a>
         </div>
       </div>
     </footer>
