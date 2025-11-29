@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import React from "react";
 import { useToast } from "@/hooks/use-toast";
+import MapComponent from "../Map";
 
 // Note: Metadata cannot be exported from client components
 // SEO handled via root layout metadata template
@@ -68,9 +69,9 @@ const ContactUs = () => {
     <div>
       <h1 className="text-4xl font-bold text-center mb-4 pt-2">Contact Us</h1>
       <p className="text-center mb-6 font-[family-name:var(--font-geist-sans)] px-2">
-        We're here to assist you with any inquiries or support you may need.
-        Feel free to reach out using the information below or by filling out the
-        contact form.
+        We're here to assist you at Ram Chander Radhey Shyam Jaiswal with any
+        inquiries or support you may need. Feel free to reach out using the
+        information below.
       </p>
       <div className="container mx-auto p-6 rounded-lg shadow-md flex justify-center flex-col md:flex-row md:space-x-6">
         <div className="relative border rounded-xl sm:mx-6 md:w-1/2 p-6 overflow-hidden my-4 sm:my-0 flex flex-col justify-between h-full">
@@ -104,6 +105,8 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
+
+      <MapComponent />
     </div>
   );
 };
