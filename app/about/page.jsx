@@ -117,13 +117,18 @@ const AboutUs = () => {
       <section className="mb-8">
         <h2 className="text-3xl font-semibold mb-4">Meet Our Team</h2>
         <p className="mb-4">
-          Our team comprises industry experts and dedicated professionals who
-          are passionate about transforming the steel distribution landscape in
-          India. Each member brings unique skills and experiences, allowing us
-          to innovate and adapt in an ever-changing market. Together, we work
-          towards a common goal of excellence, reliability, and customer
-          satisfaction, ensuring that our clients receive the best possible
-          service and support.
+          Our Journey Established in 1980 in Ayodhya, Uttar Pradesh, our firm
+          has grown from a small regional iron supplier into a trusted name
+          across the construction and infrastructure sector. Over four decades,
+          we have proudly supplied high-quality steel, TMT bars, structural
+          sections, and roofing materials to contractors, builders, and
+          government agencies across India. Our journey is built on hard work,
+          consistency, and trust values that have guided every customer
+          relationship since our beginning. As our expertise and capacity
+          expanded, we became authorized partners for leading brands such as
+          SAIL, Jindal, JSW, Apollo, Ankur, Rungta, MSP, and many more. This
+          strong supply network allows us to deliver reliable materials for
+          projects of every scale
         </p>
         <p className="mb-4">
           We believe in fostering a collaborative environment where ideas can

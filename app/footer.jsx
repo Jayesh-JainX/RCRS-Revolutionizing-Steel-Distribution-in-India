@@ -6,14 +6,12 @@ function Footer() {
     <footer className="bg-secondary text-sm text-neutral-500 dark:text-neutral-400 ">
       <div className="hidden md:flex flex-col gap-6 border-t border-neutral-200 px-4 py-6 pt-8 text-sm  dark:border-neutral-700">
         <div className="flex ml-[14vw]">
-          <Link href={"/"} className="flex items-center top-0 space-x-3">
-            <div className="h-8 w-8 rounded-lg flex items-center justify-center">
-              <img
-                src="/header-icon.png"
-                alt="RCRS Logo"
-                className="h-8 w-8 rounded-lg"
-              />
-            </div>
+          <Link href={"/"} className="flex items-center top-0 space-x-1">
+            <img
+              src="/header-icon.png"
+              alt="RCRS Logo"
+              className="h-8 w-8 rounded-lg"
+            />
             <h1 className="text-md font-semibold font-[family-name:var(--font-geist-sans)]">
               RCRS
             </h1>
@@ -106,7 +104,7 @@ function Footer() {
       <div className="md:hidden flex flex-col gap-6 border-t border-neutral-200 px-4 py-6 pt-8 text-sm dark:border-neutral-700">
         <div className="flex flex-col md:flex-row md:justify-between">
           <div className="flex items-center mb-4 md:mb-0 md:ml-[14vw]">
-            <Link href={"/"} className="flex items-center top-0 space-x-3">
+            <Link href={"/"} className="flex items-center top-0 space-x-1">
               <img
                 src="/header-icon.png"
                 alt="RCRS Logo"
