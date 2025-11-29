@@ -50,6 +50,8 @@ const Header = () => {
   const handleRecommendationClick = () => {
     toggleSidebar();
     setShowRecommendations(false);
+    // Ensure body overflow is reset before navigation
+    document.body.style.overflow = "";
   };
 
   useEffect(() => {
