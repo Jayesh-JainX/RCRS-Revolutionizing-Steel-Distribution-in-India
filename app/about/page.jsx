@@ -115,7 +115,7 @@ const AboutUs = () => {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-3xl font-semibold mb-4">Meet Our Team</h2>
+        <h2 className="text-3xl font-semibold mb-4">Our Journey</h2>
         <p className="mb-4">
           Our Journey Established in 1980 in Ayodhya, Uttar Pradesh, our firm
           has grown from a small regional iron supplier into a trusted name
