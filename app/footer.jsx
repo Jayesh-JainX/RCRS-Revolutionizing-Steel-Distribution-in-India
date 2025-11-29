@@ -7,8 +7,12 @@ function Footer() {
       <div className="hidden md:flex flex-col gap-6 border-t border-neutral-200 px-4 py-6 pt-8 text-sm  dark:border-neutral-700">
         <div className="flex ml-[14vw]">
           <Link href={"/"} className="flex items-center top-0 space-x-3">
-            <div className="h-8 w-8 bg-blue-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">R</span>
+            <div className="h-8 w-8 rounded-lg flex items-center justify-center">
+              <img
+                src="/header-icon.png"
+                alt="RCRS Logo"
+                className="h-8 w-8 rounded-lg"
+              />
             </div>
             <h1 className="text-md font-semibold font-[family-name:var(--font-geist-sans)]">
               RCRS
@@ -16,7 +20,6 @@ function Footer() {
           </Link>
           <nav>
             <div className="grid grid-cols-2 gap-8 ml-[5vw]">
-              {/* Left Column */}
               <ul className="flex flex-col">
                 <li>
                   <Link
@@ -44,7 +47,6 @@ function Footer() {
                 </li>
               </ul>
 
-              {/* Right Column */}
               <ul className="flex flex-col">
                 <li>
                   <Link
@@ -105,11 +107,13 @@ function Footer() {
         <div className="flex flex-col md:flex-row md:justify-between">
           <div className="flex items-center mb-4 md:mb-0 md:ml-[14vw]">
             <Link href={"/"} className="flex items-center top-0 space-x-3">
-              <div className="h-8 w-8 bg-blue-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">R</span>
-              </div>
+              <img
+                src="/header-icon.png"
+                alt="RCRS Logo"
+                className="h-8 w-8 rounded-lg"
+              />
               <h1 className="text-md font-semibold font-[family-name:var(--font-geist-sans)]">
-                RCRS STORE
+                RCRS
               </h1>
             </Link>
           </div>
