@@ -3,7 +3,6 @@ import "./globals.css";
 import { ThemeProvider } from "./components/theme-provider";
 import NextTopLoader from "nextjs-toploader";
 import Header from "./header";
-import { Analytics } from "@vercel/analytics/react";
 import Footer from "./footer";
 import { structuredData } from "@/lib/structuredData";
 import Script from "next/script";
@@ -165,7 +164,6 @@ export default function RootLayout({ children }) {
           <ToastDemo />
           <SpeedInsights />
           <Footer />
-          <Analytics />
         </ThemeProvider>
       </body>
     </html>
