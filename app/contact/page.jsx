@@ -1,70 +1,46 @@
-"use client";
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import React from "react";
-import { useToast } from "@/hooks/use-toast";
-import MapComponent from "../Map";
+import MapComponent from "../../components/Map";
 
-// Note: Metadata cannot be exported from client components
-// SEO handled via root layout metadata template
+export const metadata = {
+  title: "Contact Us",
+  description:
+    "Get in touch with Ramchandra Radheshyam jaiswal Iron Steel - Ayodhya. We're here to assist you with any inquiries about our steel products and services. Contact us via phone, email, or visit our location.",
+  keywords: [
+    "Contact RCRS Steel",
+    "Steel Supplier Contact Ayodhya",
+    "RCRS Jaiswal Contact",
+    "Steel Distributor Ayodhya Contact",
+    "Iron Steel Contact Uttar Pradesh",
+    "Get Quote Steel Ayodhya",
+  ],
+  openGraph: {
+    title: "Contact Us | Ramchandra Radheshyam jaiswal Iron Steel - Ayodhya",
+    description:
+      "Contact Ramchandra Radheshyam jaiswal Iron Steel for all your steel needs. Located near Devkali bypass, Ayodhya. Call +91-9044944111 or email rcrsjaiswal@gmail.com",
+    url: "https://rcrsjaiswal.in/contact",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Contact RCRS Steel Ayodhya",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Us | Ramchandra Radheshyam jaiswal Iron Steel",
+    description:
+      "Get in touch with RCRS Steel Ayodhya. Phone: +91-9044944111, Email: rcrsjaiswal@gmail.com",
+    images: ["/og-image.png"],
+  },
+  alternates: {
+    canonical: "https://rcrsjaiswal.in/contact",
+  },
+};
 
 const ContactUs = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
-  const { toast } = useToast(); // Initialize toast
-  const [loading, setLoading] = useState(false);
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-
-    try {
-      const response = await fetch("http://localhost:3001/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        toast({
-          description: "Message sent successfully!",
-          className: "text-green-500",
-        });
-        setFormData({ name: "", email: "", phone: "", message: "" });
-      } else {
-        const errorData = await response.json();
-        const errorMessage = errorData.errors
-          ? errorData.errors.map((err) => err.msg).join(", ")
-          : "Failed to send message.";
-        toast({
-          title: "An error occurred",
-          description: errorMessage,
-          variant: "destructive",
-        });
-      }
-    } catch (error) {
-      toast({
-        title: "An error occurred",
-        description: "An error occurred. Please try again later.",
-        variant: "destructive",
-      });
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
     <div>
       <h1 className="text-4xl font-bold text-center mb-4 pt-2">Contact Us</h1>

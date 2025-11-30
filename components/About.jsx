@@ -30,15 +30,15 @@ export default function AboutUs() {
             Your Trusted Iron & Steel Partner Since 1980
           </span>
           <p className="mt-4 font-sans text-sm md:text-md ">
-            Founded in 1980 in Ayodhya, Uttar Pradesh, our family-run iron &
-            steel enterprise has been a trusted supplier of high-quality TMT
-            bars, angles, channels, flats, plates, and structural materials for
-            over six decades. As authorised dealers of leading brands such as
-            SAIL, Jindal, JSW, and Apollo, we provide reliable products at
-            competitive prices to contractors, fabricators, builders, and
-            industries across India. With a legacy built on honesty, timely
-            service, and customer commitment, we continue to deliver strong
-            foundations for projects of every scale.
+            Founded in 1980 in Ayodhya, Uttar Pradesh, Ram Chander Radhey Shyam
+            Jaiswal (RCRS) is our family-run iron & steel enterprise has been a
+            trusted supplier of high-quality TMT bars, angles, channels, flats,
+            plates, and structural materials for over six decades. As authorised
+            dealers of leading brands such as SAIL, Jindal, JSW, and Apollo, we
+            provide reliable products at competitive prices to contractors,
+            fabricators, builders, and industries across India. With a legacy
+            built on honesty, timely service, and customer commitment, we
+            continue to deliver strong foundations for projects of every scale.
           </p>
         </div>
 

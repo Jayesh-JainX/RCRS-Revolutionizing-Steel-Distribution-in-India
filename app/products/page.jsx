@@ -1,105 +1,60 @@
-"use client";
+import ProductsList from "@/components/ProductsList";
 
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import items from "@/lib/data";
-
-// Note: Metadata cannot be exported from client components
-// SEO handled via root layout metadata template
+export const metadata = {
+  title: "Products",
+  description:
+    "Browse our comprehensive range of premium steel products at Ramchandra Radheshyam jaiswal Iron Steel. TMT bars, MS angles, steel sheets, pipes, channels, and construction materials from SAIL, Jindal, JSW, and Apollo.",
+  keywords: [
+    "Steel Products Ayodhya",
+    "TMT Bars",
+    "MS Angle",
+    "Steel Sheets",
+    "MS Pipes",
+    "C Channel",
+    "T Iron",
+    "Steel Catalog",
+    "Construction Steel Products",
+    "Iron Products Ayodhya",
+    "SAIL Products",
+    "Jindal Steel Products",
+    "JSW Steel Products",
+    "Apollo Steel Products",
+    "Galvanized Sheets",
+    "HR Sheets",
+    "GP Sheets",
+    "Barbed Wire",
+    "Roofing Sheets",
+  ],
+  openGraph: {
+    title:
+      "Steel Products | Ramchandra Radheshyam jaiswal Iron Steel - Ayodhya",
+    description:
+      "Explore our wide range of premium steel products including TMT bars, MS angles, steel sheets, pipes, and channels. Authorized dealers of SAIL, Jindal, JSW, and Apollo.",
+    url: "https://rcrsjaiswal.in/products",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "RCRS Steel Products Catalog",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Steel Products | RCRS Steel Ayodhya",
+    description:
+      "Premium steel products from SAIL, Jindal, JSW, and Apollo. TMT bars, MS angles, sheets, pipes & more.",
+    images: ["/og-image.png"],
+  },
+  alternates: {
+    canonical: "https://rcrsjaiswal.in/products",
+  },
+};
 
 const ProductsPage = () => {
-  const router = useRouter();
-  const [searchTerm, setSearchTerm] = useState("");
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const query = new URLSearchParams(window.location.search).get("q");
-    if (query) {
-      setSearchTerm(query);
-
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-    setLoading(false);
-  }, [router]);
-
-  const filteredItems = items.filter((item) =>
-    item.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-  const fallbackRecommendations = items.slice(0, 3);
-
-  return (
-    <div className=" m-4 sm:p-8 bg-background text-foreground">
-      <h1 className="text-2xl font-bold mb-4 font-[family-name:var(--font-geist-sans)]">
-        Products
-      </h1>
-      {searchTerm && (
-        <h2 className="text-lg mb-4">
-          Results for: <span className="font-semibold">{searchTerm}</span>
-        </h2>
-      )}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {loading ? (
-          <div className="col-span-1 sm:col-span-2 md:col-span-3 flex items-center justify-center h-[40vh]">
-            <p className="text-gray-600 text-xl font-semibold animate-pulse">
-              Loading...
-            </p>
-          </div>
-        ) : filteredItems.length > 0 ? (
-          filteredItems.map((item, index) => (
-            <Link key={index} href={"/products" + item.link} className="block">
-              <div className="border rounded-lg p-4 bg-primary-foreground hover:border-blue-500 transition-all duration-300">
-                <img
-                  src={item.imgSrc}
-                  alt={item.name}
-                  loading="lazy"
-                  className="h-72 w-full object-fill rounded transition duration-300 ease-in-out transform hover:scale-105"
-                />
-                <h2 className="text-lg font-semibold mt-2">{item.name}</h2>
-                <p className="text-gray-600">{item.price}</p>
-              </div>
-            </Link>
-          ))
-        ) : (
-          <div className="col-span-1 sm:col-span-2 md:col-span-3 flex flex-col items-center justify-center">
-            <p className="text-gray-600 text-2xl font-semibold mb-4 py-16">
-              No products found.
-            </p>
-            <h3 className="text-2xl font-bold mb-4 font-[family-name:var(--font-geist-sans)]">
-              You might like
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full">
-              {fallbackRecommendations.map((item, index) => (
-                <Link
-                  key={index}
-                  href={"/products" + item.link}
-                  className="block"
-                >
-                  <div className="border rounded-lg p-4 bg-primary-foreground hover:border-blue-500 transition-all duration-300">
-                    <img
-                      src={item.imgSrc}
-                      alt={item.name}
-                      loading="lazy"
-                      className="h-[25vh] w-full object-fill rounded transition duration-300 ease-in-out transform hover:scale-105"
-                    />
-                    <h2 className="text-lg font-semibold mt-2">{item.name}</h2>
-                    <p className="text-gray-600">{item.price}</p>
-                  </div>
-                </Link>
-              ))}
-            </div>
-            <a
-              href="/products"
-              className="mt-6 text-blue-600 hover:underline font-semibold"
-            >
-              See All Products
-            </a>
-          </div>
-        )}
-      </div>
-    </div>
-  );
+  return <ProductsList />;
 };
 
 export default ProductsPage;

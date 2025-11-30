@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: "https://rcrs.vercel.app",
+  siteUrl: "https://rcrsjaiswal.in",
   generateRobotsTxt: true,
 };

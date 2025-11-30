@@ -2,8 +2,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "./components/theme-provider";
 import NextTopLoader from "nextjs-toploader";
-import Header from "./header";
-import Footer from "./footer";
+import Header from "../components/header";
+import Footer from "../components/footer";
 import { structuredData } from "@/lib/structuredData";
 import Script from "next/script";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -25,7 +25,8 @@ const geistMono = localFont({
 export const metadata = {
   metadataBase: new URL("https://rcrsjaiswal.in"),
   title: {
-    default: "Ramchandra Radheshyam jaiswal Iron Steel - Ayodhya | Premium Steel Distributor Since 1980",
+    default:
+      "Ramchandra Radheshyam jaiswal Iron Steel - Ayodhya | Premium Steel Distributor Since 1980",
     template: "%s | Ramchandra Radheshyam jaiswal Iron Steel - Ayodhya",
   },
   description:
@@ -82,7 +83,8 @@ export const metadata = {
     type: "website",
     locale: "en_IN",
     url: "https://rcrsjaiswal.in",
-    title: "Ramchandra Radheshyam jaiswal Iron Steel - Ayodhya | Premium Steel Distributor Since 1980",
+    title:
+      "Ramchandra Radheshyam jaiswal Iron Steel - Ayodhya | Premium Steel Distributor Since 1980",
     description:
       "Leading steel distributor in Ayodhya since 1980. Authorized dealers of SAIL, Jindal, JSW, and Apollo. Premium quality TMT bars, MS angles, steel sheets & construction materials.",
     siteName: "Ramchandra Radheshyam jaiswal Iron Steel - Ayodhya",
@@ -97,7 +99,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ramchandra Radheshyam jaiswal Iron Steel - Ayodhya | Premium Steel Since 1980",
+    title:
+      "Ramchandra Radheshyam jaiswal Iron Steel - Ayodhya | Premium Steel Since 1980",
     description:
       "Leading steel distributor in Ayodhya. Authorized dealers of SAIL, Jindal, JSW, and Apollo. Premium quality steel products.",
     images: ["/og-image.png"],

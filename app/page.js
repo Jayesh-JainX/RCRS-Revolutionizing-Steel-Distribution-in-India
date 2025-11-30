@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from "react";
-import Main from "./Main";
+import Main from "../components/Main";
 
 export const metadata = {
   title: "Home - Ramchandra Radheshyam jaiswal Iron Steel - Ayodhya",
@@ -41,11 +41,10 @@ export const metadata = {
   },
 };
 
-
-const LazyHero = lazy(() => import("./Hero"));
-const LazyAbout = lazy(() => import("./About"));
-const LazyContainer = lazy(() => import("./ContainerPage"));
-const LazyMap = lazy(() => import("./Map"));
+const LazyHero = lazy(() => import("../components/Hero"));
+const LazyAbout = lazy(() => import("../components/About"));
+const LazyContainer = lazy(() => import("../components/ContainerPage"));
+const LazyMap = lazy(() => import("../components/Map"));
 
 const Loading = () => (
   <div className="flex items-center justify-center h-screen">
