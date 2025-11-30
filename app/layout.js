@@ -88,7 +88,7 @@ export const metadata = {
     siteName: "Ramchandra Radheshyam jaiswal Iron Steel - Ayodhya",
     images: [
       {
-        url: "/Hindustan-Iron-Store-Slider-1.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Ramchandra Radheshyam jaiswal Iron Steel - Quality Steel Products in Ayodhya",
@@ -100,7 +100,7 @@ export const metadata = {
     title: "Ramchandra Radheshyam jaiswal Iron Steel - Ayodhya | Premium Steel Since 1980",
     description:
       "Leading steel distributor in Ayodhya. Authorized dealers of SAIL, Jindal, JSW, and Apollo. Premium quality steel products.",
-    images: ["/Hindustan-Iron-Store-Slider-1.jpg"],
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: "https://rcrsjaiswal.in",

@@ -27,6 +27,14 @@ export const metadata = {
       "Welcome to Ramchandra Radheshyam jaiswal Iron Steel - Your trusted partner for premium steel distribution in Ayodhya since 1980.",
     url: "https://rcrsjaiswal.in",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Ramchandra Radheshyam jaiswal Iron Steel - Quality Steel Products in Ayodhya",
+      },
+    ],
   },
   alternates: {
     canonical: "https://rcrsjaiswal.in",
