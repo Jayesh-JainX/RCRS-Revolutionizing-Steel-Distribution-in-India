@@ -1,6 +1,6 @@
 <div align="center">
 
-# <img src="./public/icon.png" alt="RCRS" width="24" height="24" style="vertical-align: middle; margin-right: 0px;"> RCRS - Revolutionizing Steel Distribution in India
+# <img src="./public/icon.png" alt="RCRS" width="26" height="20" style="vertical-align: middle; margin-right: 0px;"> RCRS - Revolutionizing Steel Distribution in India
 
 ### **Ramchandra Radheshyam Jaiswal Iron & Steel - Ayodhya**
 
