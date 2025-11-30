@@ -18,7 +18,7 @@ export function ModeToggle() {
 
   return (
     <Button
-      variant="outline"
+      variant="ghost"
       size="icon"
       onClick={handleToggle}
       aria-label="Toggle theme"
