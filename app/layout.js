@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import { ThemeProvider } from "./components/theme-provider";
+import { ThemeProvider } from "../components/theme-provider";
 import NextTopLoader from "nextjs-toploader";
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -8,7 +8,7 @@ import { structuredData } from "@/lib/structuredData";
 import Script from "next/script";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "@/components/ui/toaster";
-import { ToastDemo } from "./components/ToastPage";
+import { ToastDemo } from "../components/ToastPage";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const geistSans = localFont({
