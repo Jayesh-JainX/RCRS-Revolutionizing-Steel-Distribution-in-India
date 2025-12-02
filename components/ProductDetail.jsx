@@ -3,6 +3,7 @@
 import items from "@/lib/data";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import Image from "next/image";
 
 const ProductDetail = () => {
   const { item } = useParams();
@@ -23,11 +24,13 @@ const ProductDetail = () => {
         <>
           <div className="flex flex-col md:flex-row mb-4">
             <div className="border-2 p-10 bg-primary-foreground rounded overflow-hidden mb-4 md:mb-0 md:mr-4">
-              <img
+              <Image
                 src={product.imgSrc}
                 alt={product.name}
-                className="sm:w-[30vw] rounded sm:h-[40vh] object-fill"
-                loading="lazy"
+                width={800}
+                height={600}
+                className="rounded sm:w-[30vw] sm:h-[40vh] object-cover"
+                priority
               />
             </div>
             <div className="flex flex-col justify-start">
@@ -79,11 +82,12 @@ const ProductDetail = () => {
               className="block border border-gray-300 rounded-lg p-4 bg-primary-foreground hover:border-blue-500 transition-all duration-300"
             >
               <div className="flex flex-col items-center">
-                <img
+                <Image
                   src={recItem.imgSrc}
                   alt={recItem.name}
+                  width={400}
+                  height={300}
                   className="h-56 w-auto object-cover rounded mb-2"
-                  loading="lazy"
                 />
                 <h3 className="text-lg font-semibold mt-2">{recItem.name}</h3>
                 <p className="text-gray-600">{recItem.short}</p>

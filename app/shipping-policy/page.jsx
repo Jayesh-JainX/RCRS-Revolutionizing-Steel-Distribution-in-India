@@ -16,15 +16,15 @@ export const metadata = {
     title: "Shipping Policy - Ramchandra Radheshyam jaiswal Iron Steel",
     description:
       "Ramchandra Radheshyam jaiswal Iron Steel's shipping policy for steel products, covering delivery terms, advance payment, and inspection.",
-    url: "https://rcrsjaiswal.in/shipping-return-policy",
+    url: "https://rcrsjaiswal.in/shipping-policy",
     type: "website",
   },
   alternates: {
-    canonical: "https://rcrsjaiswal.in/shipping-return-policy",
+    canonical: "https://rcrsjaiswal.in/shipping-policy",
   },
   robots: {
     index: true,
-    follow: false,
+    follow: true,
   },
 };
 

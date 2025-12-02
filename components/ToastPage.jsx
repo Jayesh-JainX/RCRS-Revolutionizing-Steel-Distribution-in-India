@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { ToastAction } from "@/components/ui/toast";
 import { cn } from "@/lib/utils";
@@ -17,7 +17,6 @@ export const ToastDemo = () => {
             "Service Worker registered with scope:",
             registration.scope
           );
-          setTimeout(() => showInstallToast(), 2000);
         })
         .catch((error) => {
           console.error("Service Worker registration failed:", error);
@@ -68,15 +67,28 @@ export const ToastDemo = () => {
     console.log("beforeinstallprompt event fired");
   };
 
-  if (typeof window !== "undefined") {
+  // Set up listeners and SW on mount, clean up on unmount
+  useEffect(() => {
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
     registerServiceWorker();
-  }
 
-  return () => {
-    window.removeEventListener(
-      "beforeinstallprompt",
-      handleBeforeInstallPrompt
-    );
-  };
+    return () => {
+      window.removeEventListener(
+        "beforeinstallprompt",
+        handleBeforeInstallPrompt
+      );
+    };
+  }, []);
+
+  // Show install toast once the prompt is available and hasn't been shown
+  useEffect(() => {
+    if (deferredPrompt && localStorage.getItem("hasShownToast") !== "true") {
+      // slight delay to avoid jank right at mount
+      const t = setTimeout(() => showInstallToast(), 1000);
+      return () => clearTimeout(t);
+    }
+  }, [deferredPrompt]);
+
+  // This component only manages side-effects; it renders nothing
+  return null;
 };

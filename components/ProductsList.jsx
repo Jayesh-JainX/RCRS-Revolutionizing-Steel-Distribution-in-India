@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import items from "@/lib/data";
 
 const ProductsList = () => {
@@ -47,11 +48,12 @@ const ProductsList = () => {
           filteredItems.map((item, index) => (
             <Link key={index} href={"/products" + item.link} className="block">
               <div className="border rounded-lg p-4 bg-primary-foreground hover:border-blue-500 transition-all duration-300">
-                <img
+                <Image
                   src={item.imgSrc}
                   alt={item.name}
-                  loading="lazy"
-                  className="h-72 w-full object-fill rounded transition duration-300 ease-in-out transform hover:scale-105"
+                  width={600}
+                  height={400}
+                  className="h-72 w-full object-cover rounded transition duration-300 ease-in-out transform hover:scale-105"
                 />
                 <h2 className="text-lg font-semibold mt-2">{item.name}</h2>
                 <p className="text-gray-600">{item.price}</p>
@@ -74,11 +76,12 @@ const ProductsList = () => {
                   className="block"
                 >
                   <div className="border rounded-lg p-4 bg-primary-foreground hover:border-blue-500 transition-all duration-300">
-                    <img
+                    <Image
                       src={item.imgSrc}
                       alt={item.name}
-                      loading="lazy"
-                      className="h-[25vh] w-full object-fill rounded transition duration-300 ease-in-out transform hover:scale-105"
+                      width={600}
+                      height={400}
+                      className="h-[25vh] w-full object-cover rounded transition duration-300 ease-in-out transform hover:scale-105"
                     />
                     <h2 className="text-lg font-semibold mt-2">{item.name}</h2>
                     <p className="text-gray-600">{item.price}</p>

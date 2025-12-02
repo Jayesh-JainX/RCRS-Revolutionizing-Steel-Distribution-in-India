@@ -26,7 +26,7 @@ export const metadata = {
   },
   robots: {
     index: true,
-    follow: false,
+    follow: true,
   },
 };
 

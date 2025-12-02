@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function AboutUs() {
   return (
     <div className="hero-section flex flex-col justify-center items-center p-6 md:p-12 font-[family-name:var(--font-geist-sans)] ">
@@ -45,10 +46,13 @@ export default function AboutUs() {
         <div className="w-full md:w-1/2 p-3 py-5 sm:py-0 md:p-4 relative">
           <div className="absolute top-0 left-0 bg-blue-400 w-16 h-16 rounded-full opacity-50"></div>
           <div className="absolute bottom-0 right-0 bg-blue-200 w-24 h-24 rounded-full opacity-50"></div>
-          <img
+          <Image
             src="/store.png"
             alt="Steel Distribution"
+            width={1200}
+            height={800}
             className="w-full md:h-[50vh] object-cover rounded-md shadow-lg"
+            priority
           />
         </div>
       </div>

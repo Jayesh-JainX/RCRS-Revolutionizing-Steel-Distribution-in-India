@@ -1,6 +1,67 @@
 import items from "@/lib/data";
 import ProductDetail from "@/components/ProductDetail";
 
+// Inject JSON-LD for breadcrumb and product data
+function ProductJsonLd({ item }) {
+  const product = items.find((p) => p.link === "/" + item);
+  if (!product) return null;
+
+  const absoluteImg = `https://rcrsjaiswal.in${product.imgSrc}`;
+  const productUrl = `https://rcrsjaiswal.in/products/${item}`;
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://rcrsjaiswal.in/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Products",
+        item: "https://rcrsjaiswal.in/products",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: product.name,
+        item: productUrl,
+      },
+    ],
+  };
+
+  const productLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    image: absoluteImg,
+    description: product.description || product.short,
+    brand: {
+      "@type": "Brand",
+      name: "Ramchandra Radheshyam jaiswal Iron Steel",
+    },
+    sku: product.name.replace(/\s+/g, "-").toLowerCase(),
+    mainEntityOfPage: productUrl,
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productLd) }}
+      />
+    </>
+  );
+}
+
 export async function generateMetadata({ params }) {
   const { item } = params;
   const product = items.find((p) => p.link === "/" + item);
@@ -56,8 +117,14 @@ export async function generateStaticParams() {
   }));
 }
 
-const ProductPage = () => {
-  return <ProductDetail />;
+const ProductPage = ({ params }) => {
+  const { item } = params || {};
+  return (
+    <>
+      {item ? <ProductJsonLd item={item} /> : null}
+      <ProductDetail />
+    </>
+  );
 };
 
 export default ProductPage;

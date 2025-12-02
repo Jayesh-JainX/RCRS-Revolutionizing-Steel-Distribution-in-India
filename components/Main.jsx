@@ -2,12 +2,13 @@
 import { Button } from "@/components/ui/button";
 import { Gem, Goal, Telescope } from "lucide-react";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 function Main() {
   const images = [
-    "main/Slider-1.png",
-    "main/Slider-2.png",
-    "main/Slider-3.png",
+    "/main/Slider-1.png",
+    "/main/Slider-2.png",
+    "/main/Slider-3.png",
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -36,12 +37,16 @@ function Main() {
             style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
           >
             {images.map((image, index) => (
-              <img
-                key={index}
-                src={image}
-                alt={`Slider image ${index + 1}`}
-                className="w-full object-cover flex-shrink-0"
-              />
+              <div key={index} className="relative w-full h-[40vh] sm:h-[55vh] flex-shrink-0">
+                <Image
+                  src={image}
+                  alt={`Slider image ${index + 1}`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, 100vw"
+                  className="object-cover"
+                  priority={index === 0}
+                />
+              </div>
             ))}
           </div>
           <div className="absolute inset-0 flex items-center justify-between p-4">
@@ -113,12 +118,16 @@ function Main() {
             style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
           >
             {images.map((image, index) => (
-              <img
-                key={index}
-                src={image}
-                alt={`Slider image ${index + 1}`}
-                className="w-full h-[30vh] object-fill flex-shrink-0"
-              />
+              <div key={index} className="relative w-full h-[30vh] flex-shrink-0">
+                <Image
+                  src={image}
+                  alt={`Slider image ${index + 1}`}
+                  fill
+                  sizes="100vw"
+                  className="object-cover"
+                  priority={index === 0}
+                />
+              </div>
             ))}
           </div>
           <div className="absolute inset-0 flex items-center justify-between p-4">
