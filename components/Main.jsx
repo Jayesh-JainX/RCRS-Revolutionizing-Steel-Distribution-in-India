@@ -37,16 +37,14 @@ function Main() {
             style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
           >
             {images.map((image, index) => (
-              <div key={index} className="relative w-full h-[40vh] sm:h-[55vh] flex-shrink-0">
-                <Image
-                  src={image}
-                  alt={`Slider image ${index + 1}`}
-                  fill
-                  sizes="(max-width: 640px) 100vw, 100vw"
-                  className="object-cover"
-                  priority={index === 0}
-                />
-              </div>
+              <Image
+                key={index}
+                src={image}
+                width={1920}
+                height={300}
+                alt={`Slider image ${index + 1}`}
+                className="w-full object-cover flex-shrink-0"
+              />
             ))}
           </div>
           <div className="absolute inset-0 flex items-center justify-between p-4">
@@ -118,16 +116,14 @@ function Main() {
             style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
           >
             {images.map((image, index) => (
-              <div key={index} className="relative w-full h-[30vh] flex-shrink-0">
-                <Image
-                  src={image}
-                  alt={`Slider image ${index + 1}`}
-                  fill
-                  sizes="100vw"
-                  className="object-cover"
-                  priority={index === 0}
-                />
-              </div>
+              <Image
+                key={index}
+                src={image}
+                width={1920}
+                height={300}
+                alt={`Slider image ${index + 1}`}
+                className="w-full h-[30vh] object-fill flex-shrink-0"
+              />
             ))}
           </div>
           <div className="absolute inset-0 flex items-center justify-between p-4">
