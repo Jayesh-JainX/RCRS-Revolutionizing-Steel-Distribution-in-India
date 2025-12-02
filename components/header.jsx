@@ -42,16 +42,17 @@ const Header = () => {
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    toggleSidebar();
+    // Always close sidebar instead of toggling to avoid opening it on desktop
+    setSidebarOpen(false);
     if (searchQuery) {
       window.location.href = `/products?q=${encodeURIComponent(searchQuery)}`;
     }
   };
 
   const handleRecommendationClick = () => {
-    toggleSidebar();
+    // Close sidebar and hide recommendations without toggling state
+    setSidebarOpen(false);
     setShowRecommendations(false);
-
     document.body.style.overflow = "";
   };
 
@@ -102,9 +103,9 @@ const Header = () => {
       {scrolled && <div className="h-[72px]"></div>}
 
       <div
-        className={`transition-all duration-300 ${
+        className={`z-50 transition-all duration-300 ${
           scrolled
-            ? "fixed top-0 left-0 right-0 z-40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80"
+            ? "fixed top-0 left-0 right-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80"
             : ""
         }`}
       >
@@ -172,7 +173,7 @@ const Header = () => {
             {showRecommendations && filteredItems.length > 0 && (
               <div
                 ref={recommendationsRef}
-                className="absolute bg-primary-foreground border border-gray-500 rounded-lg mt-1 z-10 w-[30vw]"
+                className="absolute bg-primary-foreground border border-gray-500 rounded-lg mt-1 z-50 w-[30vw]"
               >
                 {filteredItems.map((item, index) => (
                   <Link
@@ -245,7 +246,7 @@ const Header = () => {
                 {showRecommendations && filteredItems.length > 0 && (
                   <div
                     ref={recommendationsRef}
-                    className="absolute bg-primary-foreground border border-gray-500 rounded-lg mt-1 z-10 w-[71vw]"
+                    className="absolute bg-primary-foreground border border-gray-500 rounded-lg mt-1 z-50 w-[71vw]"
                   >
                     {filteredItems.map((item, index) => (
                       <Link

@@ -36,7 +36,7 @@ const ProductDetail = () => {
                 <span className="text-blue-500">{product.short}</span>
               </p>
               <p className="mt-2">{product.description}</p>
-              <p className="mt-2 text-md text-gray-700">
+              <p className="mt-2 text-md text-muted-foreground">
                 For inquiries, please{" "}
                 <a
                   href="tel:+91-9044944111"
