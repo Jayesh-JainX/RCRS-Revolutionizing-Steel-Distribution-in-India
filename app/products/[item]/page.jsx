@@ -46,6 +46,19 @@ function ProductJsonLd({ item }) {
     },
     sku: product.name.replace(/\s+/g, "-").toLowerCase(),
     mainEntityOfPage: productUrl,
+    offers: {
+      "@type": "Offer",
+      url: productUrl,
+      priceCurrency: "INR",
+      price: "0",
+      priceValidUntil: "2026-12-31",
+      availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
+      seller: {
+        "@type": "Organization",
+        name: "Ramchandra Radheshyam jaiswal Iron Steel",
+      },
+    },
   };
 
   return (
