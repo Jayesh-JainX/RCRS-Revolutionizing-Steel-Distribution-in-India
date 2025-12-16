@@ -7,6 +7,9 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV !== "development", // Remove console.log in production
   },
+  // Add an empty Turbopack config to silence Next.js 16 warning
+  // when a webpack config (from a plugin) is present.
+  turbopack: {},
 };
 
 export default withPWA({
