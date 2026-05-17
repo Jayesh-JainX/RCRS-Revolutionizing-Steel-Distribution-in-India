@@ -1,41 +1,44 @@
 import React from "react";
 import Link from "next/link";
 import {
-  ArrowUpCircle,
-  BarChart2,
-  Building,
-  Pipette,
-  RectangleEllipsis,
-  Shield,
-  Sliders,
-  Sparkles,
-  Triangle,
-} from "lucide-react";
+  BsArrowUpCircle,
+  BsBarChart,
+  BsBuilding,
+  BsEyedropper,
+  BsCardText,
+  BsShield,
+  BsSliders,
+  BsTriangle,
+} from "react-icons/bs";
+import { HiMiniSparkles } from "react-icons/hi2";
 import products from "@/lib/products";
 import { Button } from "@/components/ui/button";
 
 function Hero() {
   const renderIcon = (iconName) => {
     const iconProps = "mx-auto mb-4 text-blue-500 h-10 w-10";
+
+    // The switch cases remain exactly the same to match your database/products.js strings
     switch (iconName) {
       case "BarChart2":
-        return <BarChart2 className={iconProps} />;
+        return <BsBarChart className={iconProps} />;
       case "Triangle":
-        return <Triangle className={iconProps} />;
+        return <BsTriangle className={iconProps} />;
       case "RectangleEllipsis":
-        return <RectangleEllipsis className={iconProps} />;
+        // BsCardText is a great alternative for a rectangle with lines/dots
+        return <BsCardText className={iconProps} />;
       case "Pipette":
-        return <Pipette className={iconProps} />;
+        return <BsEyedropper className={iconProps} />;
       case "Shield":
-        return <Shield className={iconProps} />;
+        return <BsShield className={iconProps} />;
       case "ArrowUpCircle":
-        return <ArrowUpCircle className={iconProps} />;
+        return <BsArrowUpCircle className={iconProps} />;
       case "Building":
-        return <Building className={iconProps} />;
+        return <BsBuilding className={iconProps} />;
       case "Sliders":
-        return <Sliders className={iconProps} />;
+        return <BsSliders className={iconProps} />;
       case "Sparkles":
-        return <Sparkles className={iconProps} />;
+        return <HiMiniSparkles className={iconProps} />;
       default:
         return null;
     }
@@ -59,7 +62,7 @@ function Hero() {
             className="relative overflow-hidden product bg-primary-foreground p-4 md:p-6 rounded-lg border hover:border-blue-500 shadow text-center w-full flex flex-col group"
           >
             <div
-              className="absolute inset-0 bg-cover bg-center blur-sm transition-opacity duration-200 ease-in-out opacity-0 group-hover:opacity-60" // Added transition properties
+              className="absolute inset-0 bg-cover bg-center blur-sm transition-opacity duration-200 ease-in-out opacity-0 group-hover:opacity-60"
               style={{
                 backgroundImage: `url(${product.img})`,
                 filter: "blur(5px)",
@@ -80,7 +83,6 @@ function Hero() {
 
       <div className="flex justify-center mt-6">
         <Link href={"/products"}>
-          {" "}
           <Button variant="secondary">View All Products</Button>
         </Link>
       </div>

@@ -10,6 +10,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "@/components/ui/toaster";
 import { ToastDemo } from "../components/ToastPage";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import PWARegistration from "../components/PWARegistration";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -112,6 +113,18 @@ export const metadata = {
   verification: {
     google: "tS79y0KazvnvyQ5xkEdJW8RC955XhgLbbLZy783oAuU",
   },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "RCRS Distributor",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+};
+
+export const viewport = {
+  themeColor: "#2299DD",
 };
 
 export default function RootLayout({ children }) {
@@ -119,6 +132,7 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <head>
         <GoogleAnalytics />
+        <PWARegistration />
         <Script
           id="organization-schema"
           type="application/ld+json"

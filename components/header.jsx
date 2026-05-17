@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { ModeToggle } from "./theme";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Headset, Search, Menu, X, Mail } from "lucide-react";
+import { FiHeadphones, FiSearch, FiMenu, FiX, FiMail } from "react-icons/fi";
 import items from "@/lib/data";
 import {
   Tooltip,
@@ -167,7 +167,7 @@ const Header = () => {
                 variant="link"
                 className="h-2 hover:no-underline"
               >
-                <Search />
+                <FiSearch />
               </Button>
             </form>
             {showRecommendations && filteredItems.length > 0 && (
@@ -206,12 +206,12 @@ const Header = () => {
             className="ml-2 hover:no-underline hidden sm:block "
           >
             <Button variant="link">
-              <Headset />
+              <FiHeadphones />
             </Button>
           </a>
 
           <Button variant="ghost" onClick={toggleSidebar} className="sm:hidden">
-            <Menu />
+            <FiMenu />
           </Button>
         </header>
 
@@ -228,7 +228,7 @@ const Header = () => {
               <div className="flex items-center justify-between mb-4">
                 <span className="font-bold text-xl">Menu</span>
                 <Button variant="ghost" onClick={toggleSidebar}>
-                  <X className="w-5 h-5" />
+                  <FiX className="w-5 h-5" />
                 </Button>
               </div>
 
@@ -308,7 +308,7 @@ const Header = () => {
                     onClick={closeSidebar}
                   >
                     <Button variant="link">
-                      <Mail />
+                      <FiMail />
                     </Button>
                   </a>
                   <a
@@ -317,7 +317,7 @@ const Header = () => {
                     onClick={closeSidebar}
                   >
                     <Button variant="link">
-                      <Headset />
+                      <FiHeadphones />
                     </Button>
                   </a>
                 </div>

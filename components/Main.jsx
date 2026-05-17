@@ -1,6 +1,8 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Gem, Goal, Telescope } from "lucide-react";
+import { IoTelescope } from "react-icons/io5";
+import { GoGoal } from "react-icons/go";
+import { FaGem } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
@@ -69,7 +71,7 @@ function Main() {
           <div className="flex flex-col border transition-colors duration-300 ease-in-out hover:border-blue-500 items-center p-8 rounded-lg rounded-br-lg shadow-lg bg-primary-foreground -translate-y-10">
             <div className="relative mb-4">
               <div className="-inset-1 bg-blue-100 blur-lg" />
-              <Telescope className="relative z-10 text-blue-600" size={40} />
+              <IoTelescope className="relative z-10 text-blue-600" size={40} />
             </div>
             <h2 className="text-lg text-center font-bold mb-2">Our Vision</h2>
             <p className="text-center font-[family-name:var(--font-geist-sans)]">
@@ -82,7 +84,7 @@ function Main() {
           <div className="flex flex-col transition-colors duration-300 ease-in-out hover:border border-white items-center p-6 rounded-lg shadow-lg bg-blue-500 text-black -translate-y-16  ">
             <div className="relative mb-4">
               <div className="-inset-1 rounded-full bg-blue-300 blur-lg" />
-              <Goal className="relative z-10 text-white" size={40} />
+              <GoGoal className="relative z-10 text-white" size={40} />
             </div>
             <h2 className="text-lg text-center font-extrabold mb-2">
               Our Mission
@@ -97,7 +99,7 @@ function Main() {
           <div className="flex flex-col border transition-colors duration-300 ease-in-out hover:border-blue-500 items-center p-8 rounded-lg rounded-bl-lg  shadow-lg bg-primary-foreground  -translate-y-10">
             <div className="relative mb-4">
               <div className=" -inset-1 rounded-full bg-blue-100 blur-lg" />
-              <Gem className="relative z-10 text-blue-600" size={40} />
+              <FaGem className="relative z-10 text-blue-600" size={40} />
             </div>
             <h2 className="text-lg text-center font-bold mb-2">Our Values</h2>
             <p className="text-center font-[family-name:var(--font-geist-sans)]">
@@ -148,7 +150,7 @@ function Main() {
           <div className="flex flex-col border transition-colors duration-300 ease-in-out hover:border-blue-500 items-center p-4 rounded-lg shadow-lg bg-primary-foreground">
             <div className="relative mb-4">
               <div className="-inset-1 bg-blue-100 blur-lg" />
-              <Telescope className="relative z-10 text-blue-600" size={40} />
+              <IoTelescope className="relative z-10 text-blue-600" size={40} />
             </div>
             <h2 className="text-lg text-center font-bold mb-2">Our Vision</h2>
             <p className="text-center font-[family-name:var(--font-geist-sans)]">
@@ -161,7 +163,7 @@ function Main() {
           <div className="flex flex-col transition-colors duration-300 ease-in-out hover:border border-white items-center p-4 rounded-lg shadow-lg bg-blue-500 text-black">
             <div className="relative mb-4">
               <div className="-inset-1 rounded-full bg-blue-300 blur-lg" />
-              <Goal className="relative z-10 text-white" size={40} />
+              <GoGoal className="relative z-10 text-white" size={40} />
             </div>
             <h2 className="text-lg text-center font-extrabold mb-2">
               Our Mission
@@ -176,7 +178,7 @@ function Main() {
           <div className="flex flex-col border transition-colors duration-300 ease-in-out hover:border-blue-500 items-center p-4 rounded-lg shadow-lg bg-primary-foreground">
             <div className="relative mb-4">
               <div className="-inset-1 rounded-full bg-blue-100 blur-lg" />
-              <Gem className="relative z-10 text-blue-600" size={40} />
+              <FaGem className="relative z-10 text-blue-600" size={40} />
             </div>
             <h2 className="text-lg text-center font-bold mb-2">Our Values</h2>
             <p className="text-center font-[family-name:var(--font-geist-sans)]">

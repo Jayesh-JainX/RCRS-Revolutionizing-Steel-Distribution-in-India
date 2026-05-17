@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Moon, Sun } from "lucide-react";
+import { FiMoon, FiSun } from "react-icons/fi";
 import { useTheme } from "next-themes";
 
 import { Button } from "@/components/ui/button";
@@ -23,12 +23,12 @@ export function ModeToggle() {
       onClick={handleToggle}
       aria-label="Toggle theme"
     >
-      <Sun
+      <FiSun
         className={`h-[1.2rem] w-[1.2rem] transition-all ${
           isDark ? "rotate-90 scale-0" : "rotate-0 scale-100"
         }`}
       />
-      <Moon
+      <FiMoon
         className={`absolute h-[1.2rem] w-[1.2rem] transition-all ${
           isDark ? "rotate-0 scale-100" : "rotate-90 scale-0"
         }`}

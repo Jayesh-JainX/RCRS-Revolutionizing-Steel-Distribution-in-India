@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { ToastAction } from "@/components/ui/toast";
 import { cn } from "@/lib/utils";
+// Imported the install icon from react-icons
+import { MdInstallMobile } from "react-icons/md";
 
 export const ToastDemo = () => {
   const { toast } = useToast();
@@ -33,7 +35,12 @@ export const ToastDemo = () => {
         duration: 8000,
         action: (
           <div style={{ display: "flex", gap: "10px" }}>
-            <ToastAction altText="Install" onClick={handleInstall}>
+            <ToastAction
+              altText="Install"
+              onClick={handleInstall}
+              className="flex items-center gap-2"
+            >
+              <MdInstallMobile size={18} />
               Install
             </ToastAction>
           </div>

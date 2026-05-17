@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Home, PackageSearch } from "lucide-react";
+import { FaHome, FaBoxOpen } from "react-icons/fa";
 
 export default function NotFound() {
   return (
@@ -21,13 +21,13 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-6">
           <Link href="/" className="inline-block">
             <Button variant="default" className="gap-2">
-              <Home size={18} />
+              <FaHome size={18} />
               Go Home
             </Button>
           </Link>
           <Link href="/products" className="inline-block">
             <Button variant="secondary" className="gap-2">
-              <PackageSearch size={18} />
+              <FaBoxOpen size={18} />
               View Products
             </Button>
           </Link>
